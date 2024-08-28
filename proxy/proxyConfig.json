@@ -1,0 +1,26 @@
+{
+    "host": "enmapache.athtem.eei.ericsson.se",
+    "port": 443,
+    "protocol": "https",
+    "headers": {
+        "X-Tor-UserID":"administrator",
+        "X-Proxy-Password":"TestPassw0rd",
+        "Cookie": "iPlanetDirectoryPro=S1~AQIC5wM2LY4SfcwAGOyrlaUqquYs-bwoamCEQMVtC5QqiUU.*AAJTSQACMDIAAlNLABQtNTA4NzkzNDk4OTkxNTUzNjQ4OQACUzEAAjAx*"
+    },
+    "mappings": [{
+        "source": "/persistentObject"
+    },{
+        "source": "/managedObjects"
+    },{
+        "source": "/modelInfo"
+    },{
+        "source": "/rest"
+    },{
+        "source": "/oss"
+    },{
+        "source": "/script-engine"
+    },{
+        "source": "/editprofile",
+        "dest": "/oss/idm/usermanagement/users/administrator"
+    }]
+}

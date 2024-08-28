@@ -1,0 +1,11 @@
+{
+  "topologybrowser-locate-in-topology": {
+    "label": "Locate in Topology"
+  },
+  "topologybrowser-initiate-cm-sync": {
+    "label": "Initiate CM Sync"
+  },
+  "topologybrowser-edit-state": {
+    "label": "Edit State"
+  }
+}

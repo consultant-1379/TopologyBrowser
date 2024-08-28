@@ -1,0 +1,17 @@
+<div class = "elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases">
+    <div class="elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases-conflictError" style="display:none">
+        <div class="ebNotification ebNotification_color_red">
+            <div class="ebNotification-content">
+                <span class="ebNotification-icon">
+                    <i class="ebIcon ebIcon_error"></i>
+                </span>
+                <span class="ebNotification-label elNetworkObjectLib-ebNotification-label-multiline"></span>
+            </div>
+        </div>
+    </div>
+
+    {{#each cases}}
+     <div class="elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases-case elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases-case-{{name}}"></div>
+    {{/each}}
+
+</div>

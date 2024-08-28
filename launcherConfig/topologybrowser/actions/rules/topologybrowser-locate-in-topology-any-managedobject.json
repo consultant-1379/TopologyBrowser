@@ -1,0 +1,6 @@
+{
+  "actionName": "topologybrowser-locate-in-topology",
+  "condition": {
+    "dataType": "ManagedObject"
+  }
+}

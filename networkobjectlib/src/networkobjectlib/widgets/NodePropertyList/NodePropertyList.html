@@ -1,0 +1,24 @@
+<div class="elNetworkObjectLib-wNodePropertyList eb_scrollbar">
+    {{#each itemsNew}}
+
+    {{#if isArray}}
+    <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer">
+        <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer-{{key}}"></div>
+    </div>
+    {{else}}
+        <div class="ebText_alternative elNetworkObjectLib-wNodePropertyList-keyStyle">
+            {{key}}
+        </div>
+        <p class="elNetworkObjectLib-wNodePropertyList-valueStyle" title="{{{valueFixed}}}">
+            {{value}}
+        </p>
+    {{/if}}
+
+    {{/each}}
+
+    <div class="elNetworkObjectLib-wNodePropertyList-message-container"></div>
+
+    <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer-nonPersistent">
+    </div>
+
+</div>

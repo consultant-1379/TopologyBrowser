@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "id": "topologybrowser",
+  "path": "/#topologybrowser",
+  "type": "web",
+  "openInNewWindow": false,
+  "resources": [
+    "persistentobjectservice"
+  ],
+  "groups": [
+    {
+      "id": "Provisioning",
+      "name": "Provisioning"
+    }
+  ],
+  "provideActions": [
+    {
+      "name": "topologybrowser-locate-in-topology",
+      "multipleSelection": false,
+      "plugin": "topologybrowser/topologybrowser-locate-in-topology",
+      "primary": true,
+      "category": "Configuration Management",
+      "order": 200
+    },
+    {
+      "name": "topologybrowser-initiate-cm-sync",
+      "multipleSelection": true,
+      "plugin": "topologybrowser/topologybrowser-initiate-cm-sync",
+      "category": "Configuration Management",
+      "order": 300
+    },
+    {
+      "name": "topologybrowser-edit-state",
+      "multipleSelection": true,
+      "plugin": "topologybrowser/topologybrowser-edit-state",
+      "category": "Configuration Management",
+      "order": 310
+    }
+  ],
+
+  "consumeActions": [
+    "deletenode",
+    "enablesupervision",
+    "disablesupervision",
+    "networkexplorer-add-to-collection",
+    "advancedmoscripting-remote-show",
+    "nodecli-remote-show",
+    "cabinetviewer-remote-show",
+    "winfiolcli-remote-show",
+    "winfiolgui-remote-show",
+    "alarmmonitor-remote-show",
+    "elementmanager-remote-show",
+    "emcli-remote-show",
+    "emgui-remote-show",
+    "nmtoolbox-remote-show",
+    "shmcreateupgradejob-upgrade-node-software",
+    "shmcreatebackupjob-backup-node",
+	"shmnoderestartjob-restart-node",
+    "linkmanagement-list-link",
+    "linkmanagement-create-link",
+    "linkmanagement-delete-all-link",
+    "shmbackupinventory-view-backup-inventory",
+    "shmsoftwareinventory-view-software-inventory",
+    "shmlicenseinventory-view-license-inventory",
+    "shmhardwareinventory-view-hardware-inventory",
+    "topologybrowser-edit-state",
+    "topologybrowser-initiate-cm-sync",
+    "cellmanagement-view-cells",
+    "nwiecli-remote-show",
+    "nodemonitor-view-node",
+    "incidentmanagement-view-incidents",
+    "networkexplorer-create-nested-collection",
+    "networkexplorer-create-private-network",
+    "networkexplorer-add-topology-data",
+    "networkexplorer-delete-collections",
+    "networkexplorer-rename-collection",
+    "networkexplorer-set-to-public",
+    "generatehcreport-run-node-health-check",
+    "networkexplorer-export-topology",
+    "networkexplorer-add-object-collections",
+    "networkexplorer-export-collection",
+    "networkexplorer-remove-leaf-collection",
+    "networkexplorer-update-search-criteria-collection-contents",
+    "networkexplorer-edit-search-criteria-collection"
+  ]
+}

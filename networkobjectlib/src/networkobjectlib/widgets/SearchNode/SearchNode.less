@@ -1,0 +1,72 @@
+.elNetworkObjectLib-wSearchNode {
+    margin-bottom: 5px;
+
+    &-search {
+        margin-right: 8px;
+        line-height: 38px;
+        float: right;
+        overflow: hidden;
+
+        &-findButton {
+            min-width: 24px;
+            height: 22px;
+            padding-right: 4px;
+            padding-left: 4px;
+        }
+    }
+
+    &-find-filter {
+        display: flex;
+        align-items: center;
+
+        &-findInput {
+            box-sizing: border-box;
+            padding-right: 75px;
+            width: 100%;
+
+            &_borderColor_red {
+                border-color: #e32119;
+            }
+        }
+
+        &-findCount {
+            display: inline;
+            visibility: hidden;
+            opacity: .6;
+            position: absolute;
+            right: 100px;
+        }
+
+        &-closeIcon {
+            display: inline;
+            visibility: hidden;
+            cursor: pointer;
+            opacity: .6;
+            position: absolute;
+            right: 80px;
+        }
+
+        &-searchUpBtn {
+            align-items: center;
+            justify-content: center;
+            margin-top: .5px;
+            min-width: 20px;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+
+        &-searchDownBtn {
+            align-items: center;
+            justify-content: center;
+            margin-top: .5px;
+            min-width: 20px;
+        }
+    }
+
+    &-find {
+        &-notFound {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}

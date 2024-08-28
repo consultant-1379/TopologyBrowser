@@ -1,0 +1,30 @@
+<div class="elNetworkObjectLib-wNodePropertyList-list-listContainer">
+    <div class="elNetworkObjectLib-wNodePropertyList-infoMessage">
+        <div class="elNetworkObjectLib-wNodePropertyList-infoMessage-content">
+            <i class="ebIcon ebIcon_info elNetworkObjectLib-wNodePropertyList-infoMessage-infoPopup"></i>
+            <div class="ebColor_grey_40 elNetworkObjectLib-wNodePropertyList-infoMessage-text">{{nonPersistentInfoMessage}}</div>
+        </div>
+    </div>
+
+    {{#each itemsNew}}
+
+    {{#if isArray}}
+        <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer-nonPersistent">
+            <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer-nonPersistent-attribute-{{key}}"></div>
+        </div>
+    {{else}}
+        <div class="ebText_alternative elNetworkObjectLib-wNodePropertyList-nonPersistent-keyStyle" title="{{{description}}}">
+            {{key}}
+        </div>
+        <p class="elNetworkObjectLib-wNodePropertyList-nonPersistent-valueStyle" title="{{{valueFixed}}}">
+            {{value}}
+        </p>
+    {{/if}}
+
+    {{/each}}
+
+    <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer-nonPersistent-attributesNotFound">
+        <div class="ebColor_grey_40">{{nonPersistentAttributesNotFound}}</div>
+    </div>
+    <div class="elNetworkObjectLib-wNodePropertyList-accordionContainer-nonPersistent-errorMessage"></div>
+</div>

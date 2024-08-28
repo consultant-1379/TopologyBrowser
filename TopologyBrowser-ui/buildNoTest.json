@@ -1,0 +1,56 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "topologybrowser",
+        "name": "TopologyBrowser",
+        "version": "1.0.0",
+        "skeleton": "2.0.15",
+        "skeletonType": "app",
+        "node": "node",
+        "buildDate": "1 Jan 1970"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "actionlibrary": "1.43.16",
+        "applib": "1.43.16",
+        "assets": "1.11.3",
+        "chartlib": "1.7.2",
+        "clientsdk": "1.74.3",
+        "collection-management-lib": "1.12.1",
+        "container": "1.16.1",
+        "contextmenu": "0.1.16",
+        "dataviz": "0.2.1",
+        "flyout": "0.2.3",
+        "formvalidator": "0.3.1",
+        "grammarparsinglibrary": "1.81.11",
+        "helpsdk": "2.12.2",
+        "i18n": "3.0.4",
+        "jscore": "2.0.4",
+        "layouts": "1.9.1",
+        "logger": "0.3.1",
+        "login": "0.2.4",
+        "mapping": "1.0.4",
+        "navigation": "1.1.1",
+        "networkobjectlib": "1.140.6",
+        "networkexplorer": "1.102.1",
+        "networkexplorerlib": "1.77.11",
+        "router": "1.0.3",
+        "scopingpanel": "1.20.1",
+        "systemtime": "0.0.12",
+        "tablelib": "0.12.2",
+        "terminal": "1.1.1",
+        "uit": "1.0.1",
+        "webpush": "0.4.1",
+        "widgets": "1.10.2"
+    }
+}

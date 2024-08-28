@@ -1,0 +1,10 @@
+{
+  "actionName": "topologybrowser-edit-state",
+  "condition": {
+    "dataType": "ManagedObject",
+    "properties": [{
+      "name": "type",
+      "value":"MeContext"
+    }]
+  }
+}

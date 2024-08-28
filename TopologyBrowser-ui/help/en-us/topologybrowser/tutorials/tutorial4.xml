@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Associated_NetworkElements">
+    <title>View associated Network Elements</title>
+    <taskbody>
+        <prereq>
+            <p>
+                <ul>
+                    <li>
+                        There are nodes synchronized on ENM.
+                    </li>
+                    <li>
+                        The ENM user must have read rights for Topology Browser.
+                    </li>
+                </ul>
+            </p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                When Topology Browser is accessed from the Launcher page, the full topology tree is shown by default.
+                The user can browse and locate a Managed Object through either the top level SubNetworks or
+                the '<b>All Other Nodes</b>' branch.
+                In order to view the associated Network Element of an MeContext or ManagedElement, the user must locate
+                and return the object through Network Explorer.
+                An example of this process is given in this tutorial.
+            </p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Select an MeContext MO</xref>
+                </li>
+                <li>
+                    <xref href="#2">Open Network Explorer</xref>
+                </li>
+                <li>
+                    <xref href="#3">Enter Search Criteria</xref>
+                </li>
+                <li>
+                    <xref href="#4">Search for Network Elements</xref>
+                </li>
+                <li>
+                    <xref href="#5">Return results to Topology Browser</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>Select an MeContext MO</cmd>
+                <info>
+                    <ul>
+                        <li>Open the <b>Topology Browser</b> page and select an MeContext Managed Object from the tree.</li>
+                    </ul>
+                        <image href="/resources/images/TopologyBrowserMeContext.png" alt="Select MeContext"/>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Open Network Explorer</cmd>
+                <info>
+                    <ul>
+                        <li>After noting the objects name, click the <b>Search for an Object</b> link from the Action Bar.</li>
+                    </ul>
+                        <image href="/resources/images/ObjectSearch.png" alt="Object Search"/>
+                </info>
+            </step>
+
+            <step id="3">
+                <cmd>Enter Search Criteria</cmd>
+                <info>
+                    <ul>
+                        <li>Enter '<b>NetworkElement</b>' into the Network Explorer input box.</li>
+                    </ul>
+                        <image href="/resources/images/NetworkExplorer.png" alt="Network Explorer"/>
+                </info>
+            </step>
+
+            <step id="4">
+                <cmd>Search for Network Elements</cmd>
+                <info>
+                    <ul>
+                        <li>Click the <b>Search</b> button and wait for results.</li>
+                        <li>A table with a list of Network Elements will display. Click the checkbox of the Network Element
+                            associated with the Managed Object from step 1 above.
+                            To return to the Topology Browser page click the '<b>Locate in Topology</b>' button in the Action Bar
+                            and Topology Browser will open in a new browser window (enable popups in the browser if required).
+                            Alternatively, it is also possible to select the '<b>Return Selected Managed Object</b>' button
+                            located on the bottom bar, which will return to the App which called Network Explorer (in this case,
+                            Topology Browser).</li>
+                    </ul>
+                        <image href="/resources/images/NetworkExplorerInput.png" alt="Network Explorer Input"/>
+                </info>
+            </step>
+
+            <step id="5">
+                <cmd>Return results to Topology Browser</cmd>
+                <info>
+                    <ul>
+                        <li>When the Topology Browser page opens, it is possible to view the Network Element associated with the
+                            MO on the Topology Tree. The Topology Tree will not show the Full Network Tree when displaying
+                            Network Elements, as they are located on opposite sides of the ENM Base Model.</li>
+                    </ul>
+                        <image href="/resources/images/NetworkExplorerOutput.png" alt="Network Explorer Output"/>
+                </info>
+            </step>
+
+        </steps>
+    </taskbody>
+</task>

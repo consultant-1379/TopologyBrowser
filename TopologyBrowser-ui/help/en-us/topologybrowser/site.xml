@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <title>Topology Browser</title>
+    <homeTitle>Home</homeTitle>
+
+    <home>
+        <blocks>
+            <block color="flat_darkGreen" href="overview.xml">
+                <title>Overview</title>
+                <desc></desc>
+            </block>
+            <block color="flat_paleBlue" href="prerequisites.xml">
+                <title>Prerequisites</title>
+                <desc></desc>
+            </block>
+            <block color="flat_yellow" href="userinterface.xml">
+                <title>User Interface</title>
+                <desc></desc>
+            </block>
+            <block color="flat_green" href="tutorials.xml">
+                <title>Tutorials</title>
+                <desc></desc>
+            </block>
+            <block color="flat_purple" href="troubleshoot.xml">
+                <title>Troubleshooting</title>
+                <desc></desc>
+            </block>
+            <block color="flat_red" href="about.xml">
+                <title>About</title>
+                <desc></desc>
+            </block>
+        </blocks>
+    </home>
+</site>

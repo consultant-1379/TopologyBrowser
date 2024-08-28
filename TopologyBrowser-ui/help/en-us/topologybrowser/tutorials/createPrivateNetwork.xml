@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="NetworkExplorer-CreateCustomTopology">
+    <title>Create Private Network</title>
+    <taskbody>
+        <prereq>
+            <p>
+                To create a Private Network, you must have a user
+                account with one of the following roles:
+                <ul>
+                    <li>Network_Explorer_Administrator</li>
+                    <li>Network_Explorer_Operator</li>
+                </ul>
+            </p>
+            <p>
+                <b>Note:</b>
+                To check the currently assigned roles, select the <b>User ID</b> on the top right hand corner, and click
+                <b>View User Profile</b> from the drop-down list. The assigned roles are displayed.
+            </p>
+            <p>
+                If you do not have the required roles, contact the System Administrator.
+            </p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                This tutorial describes the steps required to create a Private Network.
+                A Private Network is a grouping of Network Elements that can be associated together for a particular purpose,
+                For example by company, project or location.
+            </p>
+        </context>
+        <steps>
+            <step id="1">
+            <cmd> Select Required Collection </cmd>
+            <info>
+                <ul>
+                    <li>Launch <xref href="#topologybrowser" scope="external">Topology Browser</xref>.
+                    </li>
+                    <li>Select a <b>Custom Topology</b> from the <b>Topology</b> drop down.</li>
+                    <li>
+                        Select Required Collection.
+                        <p>
+                            <b>Note:</b>
+                            If no collections exist, select the root of <b>Custom Topology</b>.
+                        </p>
+                    </li>
+                </ul>
+            </info>
+        </step>
+            <step id="2">
+                <cmd> Create a Private Network </cmd>
+                <info>
+                    <ul>
+                        <li>Click <b>Create a Private Network</b>. The <b>Create a Private Network</b> fly-out panel is displayed.</li>
+                        <li>Enter required information in the fly-out panel. For more information, see <xref href="../userinterface.xml#createAPrivateNetworkFlyout" type="concept">Create a Private Network Fly-out</xref>.</li>
+                        <li>Click <b>Create</b>. The collection is added to the <b>Custom Topology</b> tree and automatically selected.</li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>The newly created Private Network is displayed in the <b>Topology</b> drop-down and tree.</p>
+        </result>
+    </taskbody>
+</task>

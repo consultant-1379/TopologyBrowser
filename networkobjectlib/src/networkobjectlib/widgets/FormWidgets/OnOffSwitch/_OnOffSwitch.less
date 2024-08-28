@@ -1,0 +1,140 @@
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-outer{
+    background-color: white;
+    margin-bottom: 12px;
+
+    &_valid {
+        background-color: #7b0663;
+    }
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-innerWrapper{
+    background-color: white;
+    margin-left: 2px;
+    padding-left: 5px;
+    &-header{
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff {
+  position: relative;
+  width: 84px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+    &-modelInfoButton{
+        padding: 0px 1px;
+        float: right;
+        opacity:0.2;
+    }
+    &-modelInfoButton:hover{
+        opacity:1;
+    }
+}
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-keyStyle {
+    margin-bottom: -10px !important;
+    padding-bottom: 14px;
+    padding-top: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    &_hidden {
+      display: none;
+    }
+  }
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-checkbox {
+  display: none;
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+
+  &_status {
+    &_active {
+      margin-left: 0;
+    }
+
+    &_inactive {
+      margin-left: -100%;
+    }
+  }
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-inner-on, .elNetworkObjectLib-wNodeDetailsForm-form-onOff-inner-off {
+  float: left;
+  width: 50%;
+  height: 22px;
+  padding: 0;
+  line-height: 22px;
+  font-size: 1.2rem;
+  color: white;
+  font-family: inherit;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-inner-on {
+  padding-left: 6px;
+  background-color: #00625f;
+  color: #FFFFFF;
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-inner-off {
+  padding-right: 6px;
+  background-color: #999999;
+  color: #FFFFFF;
+  padding-left: 30px;
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-onOff-switch {
+  width: 22px;
+  margin: 0;
+  background: #FFFFFF;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 60px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#16000000', GradientType=0);
+  &_status {
+    &_active {
+      right: 0;
+    }
+
+    &_inactive {
+      right: 60px;
+    }
+  }
+}
+
+// Fix spacing-issue in Parameter Management
+.elNetworkObjectLib-wNodeDetailsForm-ebInput-status {
+    min-height: 0;
+}

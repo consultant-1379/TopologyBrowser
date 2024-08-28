@@ -1,0 +1,45 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "networkexplorer",
+        "name": "NetworkExplorer",
+        "version": "1.0.0",
+        "skeleton": "2.0.16",
+        "skeletonType": "app",
+        "node": "node",
+        "buildDate": "1 Jan 1970"
+    },
+    "phases": {
+        "convertGrammar": {
+            "execute": {
+                "command": "$(node)",
+                "attributes": [
+                    "target/.cdt/grammarparsinglibrary/g4ToJson.js",
+                    "-i",
+                    "NetworkExplorer.g4",
+                    "-o",
+                    "$(packageDir)/networkexplorer/NetworkExplorer.grammar.json"
+                ]
+            }
+        },
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "compile",
+                "convertGrammar",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "actionlibrary": "1.33.2",
+        "applib": "1.42.3",
+        "grammarparsinglibrary": "1.0.0",
+        "networkexplorerlib": "1.89.5",
+        "networkobjectlib": "1.140.6",
+        "scopingpanel": "1.2.1",
+        "clientsdk": "1.46.0"
+    }
+}

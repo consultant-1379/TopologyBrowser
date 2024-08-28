@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="NetworkExplorer-CollectionsEditPanel">
+    <title>Edit Collection Details</title>
+    <taskbody>
+        <prereq>
+            <ul>
+                <li>A collection exits.</li>
+                <li>
+                    There is a limit imposed on what can be changed after a collection is created.
+                    Not all collection details can be edited.
+                </li>
+                <li>
+                    You have appropriate access rights to modify a collection. You can modify your Public or
+                    Private collections. An Administrator can modify other user's Public collections.
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                This tutorial describes the steps required to edit an existing collection.
+            </p>
+            <b>Outline</b>
+            <ol>
+                <li>
+                    <xref type="task" href="#1">Select Required Collection</xref>
+                </li>
+                <li>
+                    <xref type="task" href="#2">Edit Collection</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>Select Required Collection</cmd>
+                <info>
+                    <ol>
+                        <li>Launch <xref href="#topologybrowser" scope="external">Topology Browser</xref>.
+                        </li>
+                        <li>Select a <b>Custom Topology</b> from the <b>Topology</b> drop down.</li>
+                        <li>
+                            Select required collection (s).
+                        </li>
+                    </ol>
+                    <p><b>Note:</b> If more than one collection is selected, only the details of the last collection selected is displayed in the panel.</p>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Edit Collection</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Click <b>Edit</b>. The details that can be edited are displayed.
+                        </li>
+                        <li>Modify required details.</li>
+                        <li>Click <b>Save</b>.</li>
+                    </ol>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <ul>
+                <li>
+                    The collection is updated with the changes made.
+                </li>
+            </ul>
+        </result>
+    </taskbody>
+</task>

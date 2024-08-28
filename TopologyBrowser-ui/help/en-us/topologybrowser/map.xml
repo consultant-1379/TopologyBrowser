@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map>
+    <topicref href="overview.xml" navtitle="Overview"/>
+    <topicref href="prerequisites.xml" navtitle="Prerequisites"/>
+    <topicref href="userinterface.xml" navtitle="User Interface"/>
+    <topicref href="tutorials.xml" navtitle="Tutorials" type="concept" outputclass="landingpage">
+        <topicref href="tutorials/tutorial2.xml" navtitle="View Attribute Details"/>
+        <topicref href="tutorials/tutorial3.xml" navtitle="Edit Attribute Details"/>
+        <topicref href="tutorials/tutorial4.xml" navtitle="View associated Network Elements"/>
+        <topicref href="tutorials/tutorial9.xml" navtitle="Manage a Custom Collection"/>
+        <topicref href="tutorials/createCustomTopology.xml" navtitle="Create a Custom Topology"/>
+        <topicref href="tutorials/createPrivateNetwork.xml" navtitle="Create a Private Network"/>
+        <topicref href="tutorials/detailPanelEdit.xml" navtitle="Edit a Collection"/>
+    </topicref>
+    <topicref href="troubleshoot.xml" navtitle="Troubleshooting"/>
+    <topicref href="about.xml" navtitle="About"/>
+</map>

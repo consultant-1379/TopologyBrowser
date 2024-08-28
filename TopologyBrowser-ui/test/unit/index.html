@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                paths: {
+                    "test": "../test"
+                },
+                i18n:  {
+                    localesDir: "../../locales",
+                    locales: ["en-us"]
+                }
+            },
+            tests: [
+                'TopologyBrowser',
+                'TopologyBrowserView',
+                'utils/Rest',
+                'ext/launchcontext/Consumable',
+                'ext/launchcontext/ConsumableSet',
+                'actions/LocateInTopology',
+                'actions/EditState',
+                'regions/main/Main',
+                'widgets/SupervisionWidget/SupervisionWidget',
+                'widgets/SupervisionWidget/Rest',
+                'widgets/ResultCell/ResultCell',
+                'widgets/LabelWidget/LabelWidget',
+                'widgets/ProgressCell/ProgressCell',
+                'widgets/SupervisionWidget/SupervisionWidgetView',
+                'widgets/ResultCell/ResultCellView'
+            ]
+        });
+
+    </script>
+</head>
+<body>
+</body>
+</html>

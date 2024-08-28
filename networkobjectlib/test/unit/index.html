@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script src="../resources/polyfills/object.assign.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                paths: {
+                    "test": "../test"
+                },
+                i18n: {
+                    locales: ['en-us'],
+                    localesDir: "../../locales"
+                }
+            },
+            tests: [
+                'regions/customTopology/CustomTopology',
+                'regions/editStateRegion/EditStateRegion',
+                'regions/customTopology/TopologyTreeBase',
+                'regions/customTopology/Rest',
+                'regions/topologyHeader/TopologyHeader',
+                'regions/topologyFDN/TopologyFDN',
+                'regions/topologyHeader/Rest',
+                'regions/attributes-region/AttributesRegion',
+                'regions/moTypeDetails/MoTypeDetails',
+                'regions/moTypeDetails/MoTypeDetailsNewTest',
+                'regions/moTypeDetails/Rest',
+                'regions/nodeDetails/NodeDetails',
+                'regions/topologyTree/TopologyTree',
+                'regions/topologyTree/TreeMemory',
+                'regions/topologyVisualisation/TopologyVisualisation',
+                'regions/progress-region/ProgressRegion',
+                'utils/AccessControl',
+                'utils/customError',
+                'utils/net',
+                'utils/Validator',
+                'utils/TooltipBuilder',
+                'utils/Filters',
+                'utils/ErrorHandler',
+                'utils/TopologyUtility',
+                'utils/LauncherUtils',
+                'utils/LauncherUtilsRest',
+                'utils/UserSettings',
+                'widgets/CounterBox/CounterBox',
+                'widgets/fdnPath/FDNPath',
+                'widgets/FormList/FormList',
+                'widgets/FormWidgets/BitsComboMultiSelectWidget/BitsComboMultiSelectWidget',
+                'widgets/FormWidgets/EnumDropdownWidget/EnumDropdownWidget',
+                'widgets/FormWidgets/EnumComboBoxWidget/EnumComboBoxWidget',
+                'widgets/FormWidgets/StringInputFormWidget/StringInputFormWidget',
+                'widgets/FormWidgets/NumberInputFormWidget/NumberInputFormWidget',
+                'widgets/FormWidgets/TreeTable/TreeTable',
+                'widgets/FormWidgets/ListWidget/ListWidget',
+                'widgets/FormWidgets/ListWidgetContainer/ListWidgetContainer',
+                'widgets/FormWidgets/ReadOnlyWrapperWidget/ReadOnlyWrapperWidget',
+                'widgets/FormWidgets/ListFormContainerWidget/ListFormContainerWidget',
+                'widgets/FormWidgets/ComplexRefWidget/ComplexRefWidget',
+                'widgets/FormWidgets/YANG/YANGChoiceWidget/YANGChoiceWidget',
+                'widgets/FormWidgets/YANG/CaseDetailsForm/CaseDetailsForm',
+                'widgets/FormWidgets/YANG/YANGChoiceSelectorWidget/YANGChoiceSelectorWidget',
+                'widgets/FormWidgets/YANG/YANGUnionWidget/YANGUnionWidget',
+                'widgets/FormWidgets/RefreshDialogWidget/RefreshDialogWidget',
+                'widgets/FormWidgets/RefreshDialogWidget/RefreshDialogWidgetContent',
+                'widgets/FormWidgets/ConfirmDialogWidget/ConfirmDialogWidget',
+                'widgets/FormWidgets/ReadOnly/ReadOnly',
+                'widgets/IconCell/IconCell',
+                'widgets/ModelInfoDisplay/ModelInfoDisplay',
+                'widgets/NodeDetailsForm/NodeDetailsForm',
+                'widgets/NodeItem/NodeItem',
+                'widgets/NodePropertyList/NodePropertyList',
+                'widgets/NonPersistentAttrForm/NonPersistentAttrForm',
+                'widgets/NonPersistentAttrList/NonPersistentAttrList',
+                'widgets/RefreshNotification/RefreshNotification',
+                'widgets/SearchNode/SearchNode',
+                'widgets/WidgetsCore/WidgetsProducer',
+                'widgets/EditManagementState/EditManagementState'
+            ]
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

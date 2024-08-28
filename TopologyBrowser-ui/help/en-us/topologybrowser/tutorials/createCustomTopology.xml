@@ -1,0 +1,61 @@
+<task id="NetworkExplorer-CreateCustomTopology">
+    <title>Create Custom Topology</title>
+    <taskbody>
+        <prereq>
+            <p>
+                To create a custom topology, you must have a user
+                account with one of the following roles:
+                <ul>
+                    <li>Network_Explorer_Administrator</li>
+                    <li>Network_Explorer_Operator</li>
+                </ul>
+            </p>
+            <p>
+                <b>Note:</b>
+                To check the currently assigned roles, select the <b>User ID</b> on the top right hand corner, and click
+                <b>View User Profile</b> from the drop-down list. The assigned roles are displayed.
+            </p>
+            <p>
+                If you do not have the required roles, contact the System administrator.
+            </p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                This tutorial describes the steps required to create a custom topology. A custom topology is a collection of
+                collections.
+                Custom topology allows you to manage topologies. You can group collections and create customs
+                topologies from these collections.
+            </p>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd> Create a Collection </cmd>
+                <info>
+                    <p>
+                        1. Launch <xref href="#topologybrowser" scope="external">Topology Browser</xref>.
+                    </p>
+                    <p>
+                        2. Select <b>Create a Custom Topology</b> from the <b>Topology</b> drop-down. The <b>Create a Custom Topology</b> fly-out is displayed.
+                    </p>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Enter Topology Details</cmd>
+                <info>
+                    <p>
+                        1. Enter the Topology <b>Name</b>.
+                    </p>
+                    <p>
+                        2. Click <b>Create</b>.
+                    </p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>The newly created custom topology is displayed in the <b>Topology</b> drop-down and tree.</p>
+        </result>
+    </taskbody>
+</task>

@@ -1,0 +1,86 @@
+{
+    "title": "Topology Browser",
+    "shortInfo": "Topology Browser allows the user to browse the topology and view the Object Model of a selected object.",
+    "trafficDisturbance": "Changes may cause a Traffic Disturbance",
+    "managedObjects": "Changes may result in the deletion of some Managed Objects",
+    "otherObjects": "Changes may result in the update of other attributes",
+    "learnNetworkImpacts": "Learn about these network impacts",
+    "sureWantToProceed": "Are you sure you want to proceed?",
+    "actionSearchWithNetworkExplorer": "Search for an Object",
+    "actionRemoveFromThisColletion": "Remove from Collection",
+    "details": "Details",
+    "atrributeChanged": "Attribute changed",
+    "atrributesChanged": "Attributes changed ($1)",
+    "ok": "OK",
+    "cancel": "Cancel",
+
+    "enterFDN": {
+        "header": "Browse to FDN",
+        "browse": "Browse",
+        "cancel": "Cancel"
+    },
+
+    "errors": {
+        "persistentObjectNotFound": {
+            "title": "Could not find requested object",
+            "body": "We cannot find the requested object. It may have been removed or is not available at this time. Please try again later."
+        },
+        "actionsFetchError": {
+            "title": "Error retrieving Actions",
+            "body": "Unable to retrieve all Actions. Please try again.",
+            "ok": "OK"
+        }
+    },
+    "tree": {
+        "nodes": {
+            "noChildren": "No children found",
+            "allOtherNodes": "All other nodes"
+        }
+    },
+    "searchForObject": {
+        "dialog": {
+            "title": "Warning",
+            "content": "You are about to switch away from Custom Topology. Any ongoing work will be lost.",
+            "secondaryContent": "When you return to Topology Browser you will return to Network Data.",
+            "optionalContent": "Are you sure you want to proceed?"
+        }
+    },
+    "customTopologyWarning": {
+        "dialog": {
+            "title": "Warning",
+            "content": "You are about to switch away from Custom Topology. Any ongoing work will be lost.",
+            "optionalContent": "Are you sure you want to proceed?"
+        }
+    },
+    "MESSAGE_NOTIFICATION": {
+        "MESSAGE": "New notifications found. Please open the Notification panel to view the updates"
+    },
+    "NOTIFICATION_PANEL": {
+        "SUPERVISION": "SUPERVISION",
+        "VIEWSTATUS": "View Status",
+        "LOCATENODE": "Locate Node",
+        "ENABLED": "Enabled",
+        "DISABLED": "Disabled",
+        "PM": "PM Node Supervision",
+        "FM": "FM Alarm Supervision",
+        "IS": "Inventory Supervision",
+        "CM": "CM Node Supervision",
+        "CLEARTASKS": "Clear completed tasks",
+        "CLEARTASKS_LABEL": "Clear all completed tasks",
+        "EMPTY_DESCRIPTION": "There are no notifications to display",
+        "EMPTY": "No Notifications",
+        "ERROR_TIMEDOUT": "Operation Timed out, please try again"
+    },
+    "SUPERVISION": {
+        "LABEL": "Notifications",
+        "VALUE": "Supervisions",
+        "SUCCESS": "SUCCESS",
+        "FAILED": "FAILED",
+        "FAIL": "FAIL",
+        "CANCELED": "CANCELED",
+        "INTERRUPTED": "INTERRUPTED",
+        "IN_PROGRESS": "IN PROGRESS",
+        "SERVER_ERROR": "Internal Server Error",
+        "TOOLTIP": "tooltip"
+    }
+}

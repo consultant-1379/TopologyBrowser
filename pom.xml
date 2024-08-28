@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--Please Use the latest version of integration pom.xml or the one you want to reference to -->
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.40</version>
+    </parent>
+    <groupId>com.ericsson.nms.pres</groupId>
+    <artifactId>TopologyBrowser</artifactId>
+    <version>1.155.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>[${project.artifactId}] JEE6 Project</name>
+    <properties>
+        <node>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/bin/node</node>
+        <npm>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/bin/npm</npm>
+        <cdt-build>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/lib/node_modules/@uisdk/cdt-build/index.js</cdt-build>
+        <cdt-serve>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/lib/node_modules/@uisdk/cdt-serve/index.js</cdt-serve>
+        <cdt-package>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/lib/node_modules/@uisdk/cdt-package/index.js</cdt-package>
+        <yuidoc>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/lib/node_modules/@uisdk/yuidocjs/lib/cli.js</yuidoc>
+        <yuitheme>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64/lib/node_modules/@uisdk/ericsson_yui_theme</yuitheme>
+    </properties>
+
+ 
+    <modules>
+        <module>networkobjectlib</module>
+        <module>TopologyBrowser-ui</module>
+        <module>ERICtopologybrowser_CXP9030753</module>
+        <module>TopologyBrowser-testsuite</module>
+    </modules>
+
+    <scm>
+        <tag>TopologyBrowser-1.38.2</tag>
+    </scm>
+</project>

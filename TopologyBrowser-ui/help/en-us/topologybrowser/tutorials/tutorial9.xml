@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Manage_a_Custom_Collection">
+    <title>Manage a Custom Collection</title>
+    <taskbody>
+        <prereq>
+            <p>You must have the Topology_Browser_Administrator role.</p>
+            <p>To check currently assigned role(s), select the <b>User ID</b> on the top right hand corner and click <b>View User Profile</b>. The assigned role(s) are displayed.</p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                This tutorial describes the steps required to create a collection with a chosen custom topology.
+                A collection in custom topology is a grouping of topology data objects or collections organized under a flexible hierarchy of user-defined collections.
+                A user may wish to group nodes under a collection in order to sort objects by custom criteria, such as: location, relationships, or type.
+
+                <b>Note:</b> A custom topology is an extension of the “Collection” action functionality already existing in ENM.
+            </p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Create collection within a custom topology</xref>
+                </li>
+                <li>
+                    <xref href="#2">Add Topology Data (Optional)</xref>
+                </li>
+                <li>
+                    <xref href="#3">Export Collection (Optional)</xref>
+                </li>
+                <li>
+                    <xref href="#4">Delete Collection (Optional)</xref>
+                </li>
+                <li>
+                    <xref href="#5">Remove Collection from Topology (Optional)</xref>
+                </li>
+                <li>
+                    <xref href="#6">Set Collection Sharing Permissions from Private to Public (Optional)</xref>
+                </li>
+                <li>
+                    <xref href="#7">Update Search Criteria Collection Contents (Optional)</xref>
+                </li>
+                 <li>
+                    <xref href="#8">Edit Search Criteria Collection (Optional)</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>Create collection within a custom topology</cmd>
+                <info>
+                    <ol>
+                        <li>Launch <xref href='https://enmapache.athtem.eei.ericsson.se/#topologybrowser' format="html" scope="external">Topology Browser</xref>.</li>
+                        <li>Select a <b>custom topology</b> from the <b>Topology</b> drop down.</li>
+                        <li>
+                            Click required collection.
+                            <p><b>Note:</b> If no collections exist, select the root of <b>Custom Topology</b>.</p>
+                        </li>
+                        <li>Click <b>Create Collection</b>. The <b>Create Collection</b> fly-out panel is displayed.</li>
+                        <li>Enter required information in the fly-out panel. For more information, see <xref href="../userinterface.xml#createACollectionFlyout" type="concept">Create a Collection Fly-out</xref>.</li>
+                        <li>Click <b>Create</b>. The collection is added to the <b>custom topology</b> tree and automatically selected.</li>
+                    </ol>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Add Topology Data (Optional)</cmd>
+                <info>
+                    <p><b>Note:</b> The <b>Add Topology Data</b> button is available in the action bar when a collection of objects is selected.</p>
+                    <ol>
+                        <li>Select required <b>Collection</b>.</li>
+                        <li>Click <b>Add Topology Data</b>. The <b>Add Topology Data</b> fly-out panel is displayed.</li>
+                        <li>In the <b>Add Topology Data</b> fly-out, select the required scope using one of the following tabs:
+                            <ul>
+                            <li>Topology <xref href="../userinterface.xml#Topology" type="concept">Learn More</xref></li>
+                            <li>Search <xref href="../userinterface.xml#Search" type="concept">Learn More</xref></li>
+                            </ul>
+                        </li>
+                        <li>Click <b>Add</b>.</li>
+                    </ol>
+                </info>
+            </step>
+            <step id="3">
+                <cmd>Export Collection (Optional)</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Select the required collection.
+                        </li>
+                        <li>Click <b>Export</b>. For more information, see
+                            <xref href="#help/app/networkexplorer/topic/tutorials/collectionsTutorials/ExportCollection" scope="external">Export Collection(s) to a File</xref> tutorial.
+                            <p><b>Note:</b> if a collections of object is selected the button is labeled <b>Export Collection</b>,
+                                if a collection of collections or collection of collections and objects is selected the button is labeled <b>Export Topology</b>.</p>
+                        </li>
+                    </ol>
+                </info>
+            </step>
+            <step id="4">
+                <cmd>Delete Collection (Optional)</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Select required collection.
+                            <p><b>Note:</b> You can only delete a collection of objects.</p>
+                        </li>
+                        <li>Click <b>Delete</b>.</li>
+                    </ol>
+                </info>
+            </step>
+            <step id="5">
+                <cmd>Remove Collection from Topology (Optional)</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Select required collection.
+                            <p><b>Note:</b> You can only remove a collection of objects.</p>
+                        </li>
+                        <li>Click <b>Remove from Collection</b>.</li>
+                        <li>Click <b>Remove</b>.</li>
+                    </ol>
+                </info>
+            </step>
+            <step id="6">
+                <cmd>Set Collection Sharing Permissions from Private to Public (Optional)</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Select required collection.
+                        </li>
+                        <li>Click <b>Set to Public</b>.</li>
+                    </ol>
+                </info>
+            </step>
+            <step id="7">
+                <cmd>Update Search Criteria Collection Contents (Optional)</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Select required collection.
+                        </li>
+                        <li>
+                            Click <b>Update Contents</b>.
+                          <p>
+                             <b>Note:</b>
+                              If the selected Criteria returns no results, a confirmation dialog box is displayed:
+                             <ul>
+                               <li>Select <b>Update Contents</b> to update the Collection with empty contents.</li>
+                               <li>Select <b>Keep Contents</b> to leave the Collection as it is.</li>
+                             </ul>
+                          </p>
+                          <p>
+                              If the selected Criteria results exceed the Collection limits, an error dialog box is displayed:
+                              <ul>
+                                  <li>Click <b>Ok</b> to leave the Collection as it is.</li>
+                              </ul>
+                          </p>
+                         <p>
+                             If you don't have permission to modify the Collection or an unexpected result is received,
+                              an error dialog box is displayed:
+                              <ul>
+                                  <li>Click <b>Ok</b> to try again.</li>
+                                  <li>Contact your System Administrator if this issue persists.</li>
+                              </ul>
+                            </p>
+                         </li>
+                     </ol>
+                </info>
+            </step>
+            <step id="8">
+                <cmd>Edit Search Criteria Collection (Optional)</cmd>
+                <info>
+                    <ol>
+                        <li>
+                            Select required collection.
+                        </li>
+                        <li>
+                            Click <b>Edit Criteria</b>.
+                        </li>
+                        <li>
+                             Select Search Criteria from the table to copy it that will be used to define the Collection.
+                        </li>
+                        <li>
+                            Click <b>Save</b>.
+                            <p>
+                              <b>Note:</b>
+                              If the selected Criteria returns no results, a confirmation dialog box is displayed:
+                              <ul>
+                                <li>Select <b>Update Criteria</b> to update the Collection Search Criteria and accept that the Collection will be empty.</li>
+                                <li>Select <b>Cancel</b> to select a different Search Criteria.</li>
+                              </ul>
+                            </p>
+                            <p>
+                              If the selected Criteria results exceed the Collection limits, an error dialog box is displayed:
+                              <ul>
+                                <li>Click <b>Ok</b> to leave the Collection as it is.</li>
+                              </ul>
+                            </p>
+                            <p>
+                             If you don't have permission to modify the Collection or an unexpected result is received,
+                              an error dialog box is displayed:
+                              <ul>
+                                  <li>Click <b>Ok</b> to try again.</li>
+                                  <li>Contact your System Administrator if this issue persists.</li>
+                              </ul>
+                            </p>
+                        </li>
+                    </ol>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>The collection is successfully managed as required.</p>
+        </result>
+    </taskbody>
+</task>

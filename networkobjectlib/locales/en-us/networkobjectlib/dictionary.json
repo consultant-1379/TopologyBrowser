@@ -1,0 +1,369 @@
+{
+    "defaultNonPersistentErrorMsg": "Failed to retrieve Non Persistent Attributes. Check logviewer for more details",
+    "attributesPanelNonPersistentErrorMsg": "Node Busy : Failed to retrieve Non-Persistent Attributes. Try again later.",
+    "attributesPanelPersistentErrorMsg": "Failed to retrieve Persistent Attributes. Try again later.",
+    "nonPersistentInfoMessage": "Non-persistent attributes are attributes that are retrieved directly from the node.",
+    "nonPersistentAttributesNotFound": "Non-Persistent Attributes not Found",
+    "branchTitle": "Collection Of Collections",
+    "leafTitle": "Collection Of Objects",
+    "hybridCollectionTitle": "Hybrid Collection",
+    "moDetails": "MO Details",
+    "nodeDetails": "Node Details",
+    "typeToFilter": "Type to Filter",
+    "typeToFindNodes": "Type to search",
+    "defaultNetworkMessageText": "Select an Object to view its attributes",
+    "defaultNetworkMessageTitle": "No Attributes Found",
+    "noChildrenFoundExpandingANode": "No children found",
+    "nonPersistentAttributes": "Non Persistent Attributes",
+    "savePropertiesErrorConstraintContent": "The $1 attribute update failed - No attribute changes were saved. Invalid input $2.Please check the error log for more details.",
+    "savePropertiesErrorConstraintContentBoth": "Failed to save all attributes. Invalid input value.Please check the error log for more details.",
+    "savePropertiesErrorContent": "The $1 attribute update failed - No attribute changes were saved. Try again later.",
+    "savePropertiesErrorContentBoth": "Failed to save all attributes. Please try again later.",
+    "savePropertiesErrorHeader": "Failed to Save Changes",
+    "savePropertiesErrorLogContent": "The $1 attribute update failed - No attribute changes were saved. Please check the error log for more details.",
+    "savePropertiesErrorLogContentBoth": "Failed to save all attributes. Please check the error log for more details.",
+    "savePropertiesForbiddenContent": "Your role does not allow you perform this operation.",
+    "savePropertiesForbiddenHeader": "Access Denied",
+    "savePropertiesForbiddenOptionalContent": "Contact your System Administrator to change your access rights.",
+    "selectBoxEmptyValueMessage": "Select a Value",
+    "trafficDisturbance": "Changes may cause a network or ENM disturbance",
+    "managedObjects": "Changes may result in the deletion of some Managed Objects",
+    "otherObjects": "Changes may result in the update of other attributes",
+    "learnNetworkImpacts": "Learn about these network impacts",
+    "sureWantToProceed": "Are you sure you want to proceed?",
+    "selected": "Selected",
+    "clear": "Clear",
+    "synchronized": "SYNCHRONIZED",
+    "synchronizing": "SYNCHRONIZING",
+    "unsynchronized": "UNSYNCHRONIZED",
+    "notsupported": "NOT_SUPPORTED",
+    "managementState": "Management State",
+    "nodeMaintenanceMsg": "Node is in maintenance",
+    "networkData":"Network Data",
+    "modelBasedTopologyHeader":"Modelled Topologies",
+    "customTopologiesHeader":"Custom Topologies",
+    "selectTopology":"Select a Topology",
+    "valuesFiltered": "Showing $1 of $2 Attributes",
+    "noAttributes": "No attributes",
+    "addNewEntry": "Add New Entry",
+    "trueText": "True",
+    "falseText": "False",
+    "recentlyModified": "Recently modified",
+    "changes": "Changes",
+    "createCustomTopology": "Create a Custom Topology",
+    "noResult": "No Result",
+    "applyRecursivelyInfoContent": "If selected, all the elements down in the hierarchy of the selected collection(s) are applied <br> If unselected, only the direct child elements of the selected collection(s) are applied",
+    "template": {
+        "applyRecursivelyCollection": "Apply recursively"
+    },
+    "dialog": {
+        "confirmSave": "Confirm Save"
+    },
+    "privateNetwork": "Private Network",
+
+    "buttons": {
+        "editAttributes": "Edit Attributes",
+        "cancel": "Cancel",
+        "saveChanges": "Save Changes",
+        "ok": "OK",
+        "close": "Close",
+        "resume": "Resume",
+        "stop": "Stop",
+        "abort": "Abort"
+    },
+
+    "inlineValidation": {
+        "cannotBeNull": "Input cannot be null",
+        "cannotBeEmpty": "Input cannot be empty",
+        "notANumber": "Not a number",
+        "invalidResolution": "Invalid Resolution",
+        "notAnInteger": "Not a valid number",
+        "stringInvalidRange": "Invalid string length",
+        "numberOutOfRange": "Number is out of range",
+        "doesNotMatchRegex": "Input does not match regular exp",
+        "invalidOption": "Invalid option",
+        "listMembersMustBeUnique": "Entry values must be unique",
+        "tooFewEntries": "There are too few entries in the sequence",
+        "tooManyEntries": "There are too many entries in the sequence",
+        "nonUniqueValues": "Contains non unique values",
+        "invalidBitsValue": "Invalid bits value"
+    },
+
+    "YANG": {
+        "errors": {
+            "conflict": "Conflicts with an attribute in another group",
+            "editConflict": "Conflicting changes from $1. Attributes cannot be edited in two or more different groups."
+        }
+    },
+
+    "treeTable":{
+        "attribute": "Attribute",
+        "currentValue": "Current Value",
+        "proposedChanges": "Proposed Changes",
+        "title": "Changes",
+        "disturbance": "Disturbance"
+    },
+
+    "tree": {
+        "nodes": {
+            "noChildren": "No children found",
+            "allOtherNodes": "All other nodes"
+        }
+    },
+    "errors": {
+        "databaseUnavailable": {
+            "title": "Unable to Connect to Database",
+            "body": "Unable to establish a database connection. Please try again later."
+        },
+        "forbidden": {
+            "title": "Access Denied",
+            "body": "Your role does not allow you to perform this operation. Contact your Security Administrator to change your access rights."
+        },
+        "unauthorized": {
+            "title": "Unauthorized",
+            "body": "Your role does not allow you to access these attributes. Contact your Security Administrator to change your access rights."
+        },
+        "forbiddenTBAC": {
+            "title": "Access Denied",
+            "body": "Your Target Based Access Control rights do not allow you to access this Managed Object. Contact your System Administrator to change your access rights."
+        },
+        "persistentObjectError": {
+            "title": "Unable to Retrieve Data",
+            "body": "The server encountered an internal error. Please try again later."
+        },
+        "persistentObjectNotFound": {
+            "title": "Could not find requested object",
+            "body": "We cannot find the requested object. It may have been removed or is not available at this time. Please try again later."
+        },
+        "networkObjectNotFound": {
+            "title": "Could not find requested object",
+            "body": "We cannot find the requested object. It may have been removed or is not available at this time."
+        },
+        "nodeBusy": {
+            "title": "Node Busy",
+            "body": "Failed to retrieve Non-Persistent Attributes. Try again later."
+        },
+        "poidNotAvailable": {
+            "title": "Missing network object",
+            "body": "This network object is removed or not available."
+        },
+        "serviceUnavailable": {
+            "title": "Service Unavailable",
+            "body": "The service is currently unavailable. Please retry your request later. If the problem persists, contact your System Administrator."
+        },
+        "timeout": {
+            "title": "Timeout",
+            "body": "Request timed out."
+        },
+        "timeoutSave": {
+            "title": "Action in progress",
+            "body": "Save ongoing, please check later if it was successful."
+        },
+        "unknownServerError": {
+            "title": "Unknown server error",
+            "body": "There was an unknown server error",
+            "errorCode": -1,
+            "detail": ""
+        },
+        "initiateCmSyncSupervisionDisabled": {
+            "rawContentMarker" : "Please ensure that the active attribute in the CmNodeHeartbeatSupervision MO has been set to true",
+            "title": "Node supervision disabled",
+            "body": "Sync initiation failed, please check if supervision is active for the node."
+        },
+        "initiateCmSyncMediationServiceUnavailable": {
+            "rawContentMarker" : "No suitable Mediation Service registered for flow",
+            "title": "Service Unavailable",
+            "body": "The service is currently unavailable. Please retry your request later. If the problem persists, contact your System Administrator."
+        },
+        "collectionNotFound": {
+            "title": "Object Not Found",
+            "body": "Collection does not exist.",
+            "errorCode": 10007
+        },
+        "memoryProtectionDataRetrievalError": {
+            "title": "Unable to Retrieve Data",
+            "body": "There is currently no capacity to process the request due to a large amount of activity on the server. Please try again later."
+        },
+        "memoryProtectionLocateObjectError": {
+            "title" : "Unable to Locate Object",
+            "body": "There is currently no capacity to process the request due to a large amount of activity on the server. Please try again later."
+        },
+        "SyncErrorFound": {
+            "errorCode": 10021
+        },
+        "TransactionError": {
+            "errorCode": 1004
+        }
+    },
+
+    "removeNodesDialog": {
+        "confirmHeader": "Remove from Collection",
+        "confirmContent": "Selected objects will be removed from parent collection but not deleted.",
+        "cancel": "Cancel",
+        "ok": "Remove"
+    },
+
+    "actions": {
+        "InitiateCmSync": {
+            "confirmHeader": "Initiate Node Sync",
+            "confirmContent": "Are you sure you want to proceed?",
+            "sync": "Sync"
+        },
+        "EditState": {
+            "reviewChanges": "Review Changes",
+            "executeChanges": "Execute Changes"
+        },
+        "RemoveTopologyData": {
+            "defaultLabel": "Remove from Collection"
+        },
+        "MoveToCollection": {
+            "defaultLabel": "Move to Collection"
+        },
+        "processingRequest": "Processing Request"
+    },
+
+    "ProgressRegion": {
+        "header": {
+            "labelStart": "Initiate Node Sync",
+            "labelEnd": "Node Sync Initiation Complete"
+        },
+        "counters": {
+            "TOTAL": {
+                "label": "Total Nodes"
+            },
+            "NOT_STARTED": {
+                "label": "Not Started"
+            },
+            "INITIATING": {
+                "label": "Initiating"
+            },
+            "SUCCESSFUL":{
+                "label": "Initiated",
+                "description": "Initiated Successfully"
+            },
+            "UPDATING":{
+                "label": "Updating",
+                "description": "Updating"
+            },
+            "UPDATED":{
+                "label": "Updated",
+                "description": "Updated Successfully"
+            },
+            "FAILED": {
+                "label": "Failed",
+                "description": "Failed to Initiate"
+            }
+        },
+        "progress": {
+            "labelStart": "Operations in progress",
+            "labelEnd": "Operations complete"
+        },
+        "columns": {
+            "name":"Node Name",
+            "result": "Results",
+            "managementState": "Proposed Maintenance State"
+        },
+        "states": {
+            "NORMAL":"Normal",
+            "MAINTENANCE": "In Maintenance"
+        },
+        "footer": {
+            "label": "Once sync is initiated, it may take a period of time for Synchronization to begin"
+        }
+    },
+
+    "editStateRegion": {
+        "header": "Edit State",
+        "nodes": "Nodes Selected",
+        "summary": "Select the state you would like to apply to the nodes and click ‘Review Changes’"
+    },
+
+    "editManagementState": {
+        "header": "Management State",
+        "normal": "Normal",
+        "maintenance": "In Maintenance"
+    },
+
+    "modelInfoDialog": {
+        "nameSpace": "Namespace",
+        "version": "Version",
+        "dataType": "Data Type",
+        "disturbances": "Disturbances",
+        "defaultValue": "Default Value",
+        "valueRange": "Value Range",
+        "stringRange": "String Range",
+        "valueResolution": "Resolution",
+        "regex": "Regex",
+        "uniqueMembers": "Unique Members",
+        "readBehavior": "Read Behavior",
+        "writeBehavior": "Write Behavior",
+        "userExposure": "User Exposure",
+        "restricted": "Restricted",
+        "MoParameterHeader": "MO Parameter",
+        "StructMemberHeader": "Struct Member",
+        "description": "Description",
+        "ok": "OK",
+        "nullable": "Nullable",
+        "lifecycleState": "Life Cycle State",
+        "lifeCycleDescription":"Life Cycle Description",
+        "dependencies": "Dependencies",
+        "precondition": "Precondition",
+        "sideEffects": "Side Effects",
+        "multiplicationFactor": "Multiplication Factor",
+        "unit": "Unit"
+    },
+
+    "labelsForBoolean": {
+        "false": "FALSE",
+        "true": "TRUE"
+    },
+
+    "inputBoxEmptyValueMessage": "Enter a Value",
+
+    "find": "Find",
+
+    "refresh": "Refresh",
+
+    "refreshError": {
+        "title": "Unable to Refresh Topology Tree",
+        "body": "The server encountered an internal error. Please try again later."
+    },
+
+    "emptyCollectionError": {
+        "title": "Empty Collection",
+        "body": "The selected collection does not contain any nodes. Please select a different collection and try again."
+    },
+
+    "refreshInfo": {
+        "title": "Objects Deleted/Removed",
+        "message": "Some objects from your selection/expansion were deleted/removed.",
+        "table": {
+            "label": "Label",
+            "type": "Type"
+        },
+        "tableTitle": "Changes"
+    },
+
+    "refreshNotification": {
+        "singleCollectionLabel": "Collection $1 is not up to date.",
+        "multipleCollectionsLabel": "Collections $1 are not up to date.",
+        "link": "Refresh"
+    },
+
+    "collectionDetailPanel":{
+        "titleType": "Collection",
+        "systemUsr": "System",
+        "detailLabels":{
+            "collection": "Collection",
+            "type": "Collection Contains",
+            "typeBranch": "Collections",
+            "typeLeaf": "Objects",
+            "permission": "Sharing Permissions",
+            "userId": "Created by",
+            "created": "Created",
+            "modified": "Modified",
+            "query": "Search Criteria",
+            "contentsUpdatedTime": "Contents Updated"
+        }
+    }
+}

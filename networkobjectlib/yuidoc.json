@@ -1,0 +1,11 @@
+{
+	"name": "NetworkObjectLib API",
+	"description": "",
+	"url": "",
+	"options": {
+		"paths": [
+			"src/"
+		],
+		"outdir": "target/pre-site/resources/api"
+	}
+}

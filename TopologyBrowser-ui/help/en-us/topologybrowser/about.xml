@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TopologyBrowser-About">
+    <title>About</title>
+    <conbody>
+        <dl>
+            <dlentry id="appName">
+                <dt>App</dt>
+                <dd>Topology Browser</dd>
+            </dlentry>
+            <dlentry id="productNumber">
+                <dt>Product Number and R-State</dt>
+                <dd>CNA 403 3289 R1A</dd>
+            </dlentry>
+            <dlentry id="link">
+                <dt>App Link</dt>
+                <dd>#topologybrowser</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

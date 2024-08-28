@@ -1,0 +1,10 @@
+{
+  "actionName": "topologybrowser-initiate-cm-sync",
+  "condition": {
+    "dataType": "ManagedObject",
+    "properties": [{
+      "name": "type",
+      "value":"NetworkElement"
+    }]
+  }
+}

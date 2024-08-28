@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Edit_Attributes_Tutorial">
+    <title>Edit Attribute Details </title>
+    <taskbody>
+        <prereq>
+            <p>
+                <ul>
+                    <li>
+                        There are nodes synchronized on ENM.
+                    </li>
+                    <li>
+                        The ENM user must have read and write rights for Topology Browser.
+                    </li>
+                </ul>
+            </p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                This tutorial describes how to edit the persistent and non-persistent attribute properties of a node using the Topology Browser.
+            </p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Select a Managed Object (MO) </xref>
+                </li>
+                <li>
+                    <xref href="#2">Enter Edit mode </xref>
+                </li>
+                <li>
+                    <xref href="#3">Select an Attribute to edit </xref>
+                </li>
+                <li>
+                    <xref href="#4">Review and confirm the changes </xref>
+                </li>
+                <li>
+                    <xref href="#5">Save the changes </xref>
+                </li>
+                <li>
+                    <xref href="#6">View the updated Attributes </xref>
+                </li>
+                <li>
+                    <xref href="#7">Edit Non-Persistent Attributes </xref>
+                </li>
+                <li>
+                    <xref href="#8">How to save 'null' </xref>
+                </li>
+                <li>
+                    <xref href="#9">Obsolete attributes</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>Select a Managed Object (MO)</cmd>
+                <info>
+                    <ul>
+                        <li>Select an object from the tree you wish to edit.</li>
+                        <li>Click the Details button located in the Action Bar. It is designated with an <b>'i'</b> icon.
+                            A sliding panel will appear detailing the attributes of the selected object.</li>
+                    </ul>
+                        <image href="../resources/images/Attributes.png" alt="EditProperties sliding panel"/>
+                </info>
+            </step>
+
+            <step id="2">
+                <cmd>Enter Edit mode</cmd>
+                <info>
+                    <ul>
+                        <li>Click the <b>Edit Attributes</b> button.</li>
+                        <li>Modifiable attributes can be identified as having a method to modify its property.
+                        The methods include an input text box, a Boolean Toggle, or a drop-down menu.</li>
+                    </ul>
+                    <image href="../resources/images/EditAttributes.png" alt="EditProperties sliding panel"/>
+                </info>
+            </step>
+
+            <step id="3">
+                <cmd>Select an Attribute to edit</cmd>
+                <info>
+                    <ul>
+                        <li>To find a specific attribute, enter the name of the attribute into the <b>Filter Attributes Name</b>,
+                            or use the vertical scroll bar to locate it.</li>
+                        <li>Enter the change you wish to make to the attribute.</li>
+                        <li>Click the <b>Save Changes</b> button at the top of the details panel.
+                            A popup dialog is displayed, which will display a warning if the attribute(s) can cause network impacts.</li>
+                    </ul>
+                    <p>
+                        <b>Note:</b>
+                        For ENUM type attributes,the drop down menu may show duplicate value names and the tooltip now contains a
+                        description that is a combination of the respective value's description and its corresponding namespace
+                        using a <b>'$$$'</b> delimiter.
+                    </p>
+                    <p>
+                        Refer to the tooltip before selecting an enum attribute.
+                    </p>
+                    <image href="../resources/images/ToolTipDuplicateEnum.png" alt="ToolTip Edit Panel"/>
+                </info>
+            </step>
+
+            <step id="4">
+                <cmd>Review and confirm the changes</cmd>
+                <info>
+                    <ul>
+                        <li>To review the attributes which will be updated, expand the <b>Changes()</b> field.</li>
+                    </ul>
+                </info>
+            </step>
+
+            <step id="5">
+                <cmd>Save the changes</cmd>
+                <info>
+                    <ul>
+                        <li>If the change should proceed, click <b>Save Changes</b> in the popup dialog, otherwise click <b>Cancel</b>.</li>
+                    </ul>
+                    <image href="../resources/images/SaveDialog.png" alt="SaveDialog Popup"/>
+                </info>
+            </step>
+
+            <step id="6">
+                <cmd>View the updated Attributes</cmd>
+                <info>
+                    <ul>
+                        <li>The updated changes can now be viewed in the attribute panel.</li>
+                    </ul>
+                    <image href="../resources/images/EditAttributesDone.png" alt="SaveDialog Popup"/>
+                </info>
+            </step>
+
+            <step id="7">
+                <cmd>Edit Non-Persistent Attributes</cmd>
+                <info>
+                    <ul>
+                        <li>Scroll to the Non Persistent Attributes section at the bottom of the panel.</li>
+                        <li>Expand the '<b>Non Persistent Attributes</b>' accordion to display the Non Persistent Attributes.</li>
+                        <li>The editable attributes can be edited and saved in the same manner as the Persistent Attributes
+                            described in the previous steps.</li>
+                    </ul>
+                    <image href="../resources/images/NP_Attributes.png" alt="Edit NP Properties sliding panel"/>
+                    <ul>
+                        <li>Note that Non Persistent Attributes are read and written directly to the node,
+                            and are therefore dependent upon node connectivity.</li>
+                        <li>Note also that not all Managed Objects (MOs) contain Non Persistent Attributes.</li>
+                    </ul>
+                </info>
+            </step>
+            <step id="8">
+                <cmd>How to save 'null'</cmd>
+                <info>
+                    <p>The user can write a '<b><i>null</i></b>' value to an attribute input field which accepts null.</p>
+                    <ul>
+                        <li>Find an editable attribute which accepts an input and has the constraint "Nullable: TRUE", or does not have the constraint "Nullable: FALSE".</li>
+                        <li>The Nullable constraint is displayed in a popup dialog found by clicking the 'i' icon just above an input field,
+                            in-line with its title, when the details panel is in edit mode.</li>
+                        <li>To write null, the <b><i>&lt;null&gt;</i></b> construct is used.</li>
+                        <li>Enter <b><i>&lt;null&gt;</i></b> into the input field and follow the saving process as described earlier.</li>
+                        <li>Note that the <b><i>&lt;null&gt;</i></b> string is never allowed as a valid <u>string</u> entry.</li>
+                        <li>Note also, that simply saving <b><i>null</i></b> to a string attribute, will result in the
+                            <u>string</u> '<b><i>null</i></b>' being saved.</li>
+                        <li>When the Details Panel is in view mode, attributes which are null are simply displayed as '<b><i>null</i></b>'.
+                        For illustration purposes, when the Details Panel enters edit mode, these attributes will display <b><i>&lt;null&gt;</i></b>. </li>
+                    </ul>
+                </info>
+            </step>
+            <step id ="9">
+                <cmd>Obsolete attributes</cmd>
+                <info>
+                    <p>The reading and saving of Obsolete attributes is limited:</p>
+                    <ul>
+                        <li>Obsolete attributes are displayed with a '<b><i>null</i></b>' value</li>
+                        <li>Obsolete attributes are read-only and cannot be edited.</li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

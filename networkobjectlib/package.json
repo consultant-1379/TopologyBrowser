@@ -1,0 +1,16 @@
+{
+  "name": "networkobjectlib",
+  "scripts": {
+    "start": "cdt2 serve",
+    "test": "cdt2 build",
+    "lint": "eslint -c ../.eslintrc.js \"src/**/*.js\" \"test/**/*.js\"",
+    "lint-fix": "npm run lint -- --fix",
+    "docs": "mvn -B site",
+    "build": "cdt2 build"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "@uisdk/ericsson_yui_theme": "0.7.3",
+    "yuidocjs": "0.10.2"
+  }
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>TopologyBrowser-testsuite</artifactId>
+        <groupId>com.ericsson.nms.pres</groupId>
+        <version>1.155.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>TopologyBrowser-testsuite-integration</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>TopologyBrowser-testsuite-integration-commons</module>
+        <module>TopologyBrowser-testsuite-integration-specs</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.failsafe.plugin>2.19.1</version.failsafe.plugin>
+
+        <browser>chrome</browser>
+        <app.url>http://localhost:8585</app.url>
+        <headless>--headless</headless>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>test-compile</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <version>3.3</version>
+                            <configuration>
+                                <source>1.8</source>
+                                <target>1.8</target>
+                            </configuration>
+                        </plugin>
+                        <plugin>
+                            <artifactId>maven-failsafe-plugin</artifactId>
+                            <version>${version.failsafe.plugin}</version>
+                            <configuration>
+                                <systemPropertyVariables>
+                                    <skipIntegration />
+                                </systemPropertyVariables>
+                                <classpathDependencyExcludes>
+                                    <classpathDependencyExcludes>org.jboss.arquillian.junit:arquillian-junit-container
+                                    </classpathDependencyExcludes>
+                                </classpathDependencyExcludes>
+                                <!--Comment this to stop tests from being executed-->
+                                <includes>
+                                    <include>**/*Spec.*</include>
+                                </includes>
+                                <excludes>
+                                    <exclude>**/*IT.*</exclude>
+                                </excludes>
+                            </configuration>
+                            <executions>
+                                <execution>
+                                    <goals>
+                                        <goal>integration-test</goal>
+                                        <goal>verify</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+        <!--Default Profile to execute BIT tests against phantomJS-->
+        <profile>
+            <id>phantomjs</id>
+            <properties>
+                <browser>phantomjs</browser>
+            </properties>
+        </profile>
+        <!--Profile to execute BIT tests in Firefox Browser in ELX machine-->
+        <profile>
+            <id>firefox_linux</id>
+            <properties>
+                <browser>firefox</browser>
+            </properties>
+        </profile>
+        <!--Profile to execute BIT tests in Chrome Browser in ELX machine-->
+        <profile>
+            <id>chrome_linux</id>
+            <properties>
+                <browser>chrome</browser>
+            </properties>
+        </profile>
+        <!--Profile to execute BIT tests in Chrome Browser in Windows machine-->
+        <profile>
+            <id>chrome_windows</id>
+            <properties>
+                <browser>chrome</browser>
+            </properties>
+        </profile>
+    </profiles>
+</project>

@@ -1,0 +1,51 @@
+{
+    "parent": "$(parentJson)/library.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "networkobjectlib",
+        "name": "NetworkObjectLib",
+        "version": "1.0.0",
+        "skeleton": "2.3.0",
+        "skeletonType": "library",
+        "title": "Network Object Library",
+        "description": "Network Object Library allows developers to use widgets and regions related to network objects"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "i18n": "3.0.4",
+        "router": "1.0.3",
+        "webpush": "0.4.1",
+        "actionlibrary": "1.45.5",
+        "jscore": "2.1.1",
+        "applib": "1.45.5",
+        "widgets": "1.11.8",
+        "assets": "1.11.10",
+        "clientsdk": "1.91.1",
+        "chartlib": "1.7.4",
+        "container": "1.17.3",
+        "contextmenu": "0.1.18",
+        "dataviz": "0.3.3",
+        "flyout": "0.2.6",
+        "helpsdk": "2.12.5",
+        "layouts": "1.9.7",
+        "navigation": "1.1.2",
+        "tablelib": "0.16.3",
+        "collection-management-lib": "1.12.5",
+        "logger": "0.3.2",
+        "systemtime": "0.0.13",
+        "formvalidator": "0.3.2",
+        "uit": "1.0.2",
+        "mapping": "1.0.6",
+        "terminal": "1.1.2"
+    }
+}

@@ -1,0 +1,92 @@
+.elNetworkObjectLib-NodeItem {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+  &-icon {
+      margin-right: 5px;
+      flex-shrink: 0;
+  }
+
+  &-label {
+      padding-right: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-shrink: 1;
+  }
+
+    &-type-wrapper {
+        flex-shrink: 1;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &-stateIcons {
+        flex-shrink: 0;
+    }
+
+    &-managementState{
+        &_hidden{
+            display: none;
+        }
+    }
+
+    &-syncStatus {
+        &_hidden{
+            display: none;
+        }
+    }
+
+    &-rat2G {
+        height: 24px;
+
+        &_hidden{
+            display: none;
+        }
+    }
+
+    &-rat3G {
+        height: 24px;
+
+        &_hidden{
+            display: none;
+        }
+    }
+
+    &-rat4G {
+        height: 24px;
+        &_hidden{
+            display: none;
+        }
+    }
+
+    &-rat5G {
+        height: 24px;
+        &_hidden{
+            display: none;
+        }
+    }
+
+    &-moreIcon {
+        height: 24px;
+
+        &_hidden{
+            display: none;
+        }
+    }
+    &-moreContent {
+        display: flex;
+        position: fixed;
+        margin-top: -5px;
+        z-index: 10;
+        background: white;
+        padding: 3px;
+        border: 1px solid #bfbfbf;
+        &_hidden{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+	"exports": {
+		"networkobjectlib/AttributesRegion": "networkobjectlib/regions/attributes-region/AttributesRegion",
+        "networkobjectlib/TopologyTree": "networkobjectlib/regions/topologyTree/TopologyTree",
+        "networkobjectlib/TopologyFDN": "networkobjectlib/regions/topologyFDN/TopologyFDN",
+        "networkobjectlib/TopologyVisualisation": "networkobjectlib/regions/topologyVisualisation/TopologyVisualisation",
+        "networkobjectlib/utils/ErrorHandler": "networkobjectlib/utils/ErrorHandler",
+        "networkobjectlib/utils/customError": "networkobjectlib/utils/customError",
+        "networkobjectlib/utils/AccessControl": "networkobjectlib/utils/AccessControl",
+        "networkobjectlib/utils/TopologyUtility": "networkobjectlib/utils/TopologyUtility",
+        "networkobjectlib/utils/Constants": "networkobjectlib/utils/Constants",
+        "networkobjectlib/ProgressRegion": "networkobjectlib/regions/progress-region/ProgressRegion",
+        "networkobjectlib/WidgetsProducer": "networkobjectlib/widgets/WidgetsCore/WidgetsProducer",
+        "networkobjectlib/DataBuilder":"networkobjectlib/widgets/WidgetsCore/DataBuilder",
+        "networkobjectlib/Validator":"networkobjectlib/utils/Validator",
+        "networkobjectlib/widgets/DialogContent/DialogContent":"networkobjectlib/widgets/DialogContent/DialogContent",
+        "networkobjectlib/EditStateRegion": "networkobjectlib/regions/editStateRegion/EditStateRegion",
+        "networkobjectlib/utils/LauncherUtils":"networkobjectlib/utils/LauncherUtils"
+    },
+    "i18n": {
+        "locales": [
+            "en-us"
+        ]
+    }
+}

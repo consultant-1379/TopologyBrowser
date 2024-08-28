@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://jboss.com/arquillian">
+    <extension qualifier="graphene">
+        <property name="url">http://127.0.0.1:8585</property>
+        <property name="waitGuiInterval">20</property>
+        <property name="waitModelInterval">20</property>
+        <property name="waitAjaxInterval">20</property>
+    </extension>
+
+    <extension qualifier="webdriver">
+        <property name="browser">${browser}</property>
+        <property name="chromeArguments">${driver.chrome.arguments}</property>
+        <property name="chromeDriverVersion">${driver.chrome.version}</property>
+    </extension>
+</arquillian>

@@ -1,0 +1,33 @@
+<project name="Network Object Library Docs">
+    <bannerLeft>
+        <name>Network Object Library</name>
+    </bannerLeft>
+
+    <publishDate position="right"/>
+
+    <bannerRight>
+        <src>images/logo.png</src>
+    </bannerRight>
+
+    <body>
+        <links>
+            <item name="Ericsson" href="http://www.ericsson.com/"/>
+        </links>
+
+        <menu name="API Documentation">
+            <item name="NetworkObjectLib API Documentation" href="/api/index.html"/>
+        </menu>
+    </body>
+
+    <skin>
+        <groupId>com.ericsson.cds</groupId>
+        <artifactId>ericsson-skin-stats</artifactId>
+        <version>1.0.3</version>
+    </skin>
+
+    <custom>
+        <fluidoSkin>
+            <sourceLineNumbersEnabled>false</sourceLineNumbersEnabled>
+        </fluidoSkin>
+    </custom>
+</project>

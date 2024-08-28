@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorials">
+    <title>User Interface</title>
+    <conbody>
+        <section>
+            <p>
+                <xref href="#workingWithBSC">Working with BSC Nodes</xref>
+            </p>
+            <p>
+                <xref href="#topologyDropdown">Topology Drop-down</xref>
+            </p>
+            <p>
+                <xref href="#topologyTree">Topology Tree</xref>
+            </p>
+            <p>
+                <xref href="#actionBar">Action Bar</xref>
+            </p>
+            <p>
+                <xref href="#path">FDN Path</xref>
+            </p>
+            <p>
+                <xref href="#multiSelection">Multi-Selection in the Tree</xref>
+            </p>
+            <p>
+                <xref href="#scopingPanel">Scoping Panel</xref>
+            </p>
+            <p>
+                <xref href="#createACollectionFlyout">Create A Collection Fly-out</xref>
+            </p>
+            <p>
+                <xref href="#createATopologyFlyout">Create A Custom Topology Fly-out</xref>
+            </p>
+            <p>
+                <xref href="#createAPrivateNetworkFlyout">Create A Private Network Fly-out</xref>
+            </p>
+            <p>
+                <xref href="#editCollection">Edit a Collection</xref>
+            </p>
+            <p>
+                <xref href="#createCollectionOfCollectionsAndObjects">Create a Collection of Collections and Objects</xref>
+            </p>
+            <p>
+                <xref href="#addObjectToCollectionOfCollections">Add Objects to a Collection of Collections</xref>
+            </p>
+            <p>
+                <xref href="#moveToCollection">Move Up to Ten Objects to a Collection</xref>
+            </p>
+            <p>
+                <xref href="#findAndLocateNode">Find and Locate Node(s) in a Topology Collection</xref>
+            </p>
+            <p>
+                <xref href="#enableAndDisableSupervision">Enable and Disable Supervisions for Node(s)</xref>
+            </p>
+        </section>
+        <section id="workingWithBSC">
+            <title>Working with BSC Nodes</title>
+            <p>
+                In ENM the BSC node is modelled using many different types of Managed Objects (MO)s.
+                MOs below BscM in the topology tree (BscM MOs) have a non-standard behavior for configuration management create, update and delete operations. All other BSC MOs have standard behavior.
+                For changes to BscM MOs, the BSC node converts the operations on the MOs into MML commands internally. Some operations will result in multiple MML commands, or multiple operations can result in one MML command. For details of the mapping of MOs and attributes to MML command, see the BSC node documentation (“MOM and MML mapping” - 1/001 21-CXA 113 13/1).
+                There may be dependencies between operations on different attributes. These are described in the model.
+            </p>
+            <p><b>Limitations and deviations for the BscM MOs</b></p>
+            <ul>
+                <li>A BSC node can only support one user at a time making changes to the BscM Managed Objects.  If the node is busy processing one request, subsequent requests will fail with a “ComNoResources" error.  Retry the request later when the node is no longer busy processing other write operations.</li>
+                <li>Some changes on BscM Managed Objects can take a long time.  If you are aware the request will take a long time (i.e. locking cells), we recommend using either a CM Edit command or a CM Bulk Import Job to make the configuration change.</li>
+            </ul>
+            <p>Topology Browser has a 30 second client request timeout.  When this time is exceeded, the operation will continue to execute on the node.  The Topology Browser page should be refreshed periodically to establish if the change was successful.</p>
+            <p><b>NOTE:</b> If the change takes longer than 5 minutes, the change will NOT be recorded in the ENM Audit log.</p>
+            <ul>
+                <li>It is possible for commands on one Managed Object to partially execute as follows.  Therefore, it is important to review operations that result in a failure very carefully:</li>
+                <li>For a request with multiple attributes, some of the attributes may succeed and some may fail.  Refresh the Topology Browser view to confirm which attributes were updated successfully</li>
+            </ul>
+        </section>
+        <section id="topologyDropdown">
+            <title>Topology Drop-down</title>
+            <p>The <b>Topology Drop-down</b> contains <b>Modelled</b> and <b>Custom</b> topologies. The <b>Modelled</b> topology is network data.</p>
+            <p>When the application is launched, the last selected topology will be opened by default.</p>
+            <p>The <b>Custom</b> topology is system defined or user defined. The following three system created topologies are displayed:</p>
+            <ul>
+                <li>Transport Topology</li>
+                <li>NR-NSA</li>
+                <li>MSC Pool Topology</li>
+            </ul>
+            <p>
+                The <b>Create a Custom Topology</b> option can be used to create your own custom topology.
+            </p>
+            <p>Transport Topology is a grouping of topology data objects or collections organized under a flexible hierarchy of user-defined collections.</p>
+            <p>NR-NSA is a system operated script used to create and maintain the NR-NSA custom topology. Changes made to this topology will be undone when the script is rerun.</p>
+            <p>MSC Pool Topology is a system operated script used to create and maintain the MSC Pool custom topology. Changes made to this topology will be undone when the script is rerun.</p>
+            <p>
+                <image href="resources/images/ModelledTopologies2.png"/>
+            </p>
+            <p>
+                <image href="resources/images/MSCPoolCollections01.png"/>
+            </p>
+            <p>The <b>NR-NSA</b> topology tree is displayed when selected from the drop-down list.</p>
+            <p>
+                <image href="resources/images/ModelledTopologies3.png"/>
+            </p>
+            <p>The <b>MSC Pool Topology</b> topology tree is displayed when selected from the drop-down list.</p>
+            <p>
+                <image href="resources/images/MSCPoolCollections02.png"/>
+            </p>
+        </section>
+
+        <section id="topologyTree">
+            <title>Topology Tree</title>
+             <p>The <b>Topology tree</b> view displays the topology selected in the <b>Topology Drop-down</b>, it displays <b>Modelled</b> and <b>Custom</b> topologies. The <b>Modelled</b> topology is network data.</p>
+            <p>When the application is launched, the last selected topology will be opened by default.</p>
+            <p>The <b>Custom</b> topology is system defined or user defined. The following three system created topologies are displayed:</p>
+            <ul>
+                <li>Transport Topology</li>
+                <li>NR-NSA</li>
+                <li>MSC Pool Topology</li>
+            </ul>
+            <p>When adding topology data to a collection or removing topology data from a collection in a <b>Custom</b> topology, and if other users are viewing the same collection, they will receive a notification informing them the collection has changed and will be provided with an option to refresh the <b>Topology tree</b>.</p>
+            <p>
+                The <b>Topology tree</b> view displays SubNetworks which are at the top level. Under '<b>All other nodes</b>'
+                are managed objects which are not classified under a SubNetwork, including for example Managed Elements and MeContext.
+                The number of MeContext and ManagedElement child nodes under a <b>SubNetwork</b> or <b>Collection</b> is displayed next to it.
+                The initial view is illustrated below.
+            </p>
+            <p>
+                <image href="resources/images/TopologyTreeStart.png" alt="Topology Tree"/>
+            </p>
+            <p>
+                The Topology Vertical Tree displays the Managed Objects which can be expanded through multiple levels to select the desired object.
+            </p>
+            <p>
+                <image href="resources/images/TopologyTree.png" alt="Topology Tree"/>
+            </p>
+            <b><u>Synchronization Status</u></b>
+            <p>
+                The Topology Tree displays the Synchronization Status of node level managed objects (MO's) on the right hand side of the tree area.
+            </p>
+            <p>
+                This is only valid for node level MO's such as MeContext, NetworkElement, and ManagedElements without MeContext.
+            </p>
+            <p>
+                There are 2 icons representing the following states; Unsynchronized (2 arrows + red 'X') and Synchronizing/Pending (2 dashing animated arrows).
+            </p>
+            <p>
+                The Synchronization State can also be viewed in the Node Details TAB found in the Details Panel, as
+                described in the <xref href="tutorials/tutorial2.xml" type="concept">View Attribute Details</xref> tutorial.
+            </p>
+            <b><u>Maintenance Mode</u></b>
+            <p>
+                The <image href="resources/images/maintenanceModeIcon.png"/> icon represents nodes undergoing maintenance.
+            </p>
+            <b><u>Radio Access Technology</u></b>
+            <p>The Network Element of type <b>RadioNode</b> can have attribute <b>radioAccessTechnology</b> with one or more 'Attribute Value'.
+                Currently radioAccessTechnology can have one or more values from list <b>[2G, 3G, 4G, 5G]</b>.</p>
+            <p>The icons <image href="resources/images/2GIcon.svg"/>
+                <image href="resources/images/3GIcon.svg"/>
+                <image href="resources/images/4GIcon.svg"/>
+                <image href="resources/images/5GIcon.svg"/>
+                represent different radioAccessTechnology.</p>
+            <p>Icons representing the configured radioAccessTechnology for the node are displayed on right side of the
+                node in following order: (if applicable)
+            </p>
+            <ul>
+                <li>Synchronize status</li>
+                <li>Maintenance mode</li>
+                <li>5G</li>
+                <li>4G</li>
+                <li>3G</li>
+                <li>2G</li>
+            </ul>
+            <p>If more than 3 icons are displayed, then only the first two icons are displayed and the <image href="resources/images/more_black_16px.svg"/> icon is displayed .</p>
+            <p>When the <image href="resources/images/more_black_16px.svg"/> icon is clicked, the remaining icon(s) is displayed.</p>
+            <b><u>All Other Nodes</u></b>
+            <p>Managed Objects (e.g. MeContext) that do not have a root (e.g. Subnetwork) will appear under the '<b>All Other Nodes</b>' branch.
+                If none of these exist then '<b>All Other Nodes</b>' branch will be empty when expanded.</p>
+            <p>
+                NetworkElements associated with the Managed Objects will never appear under '<b>All Other Nodes</b>' branch because
+                they are located on opposite sides of the ENM Base Model.</p>
+
+        </section>
+
+        <section id="actionBar">
+            <title>Action Bar</title>
+            <p>
+                <image href="resources/images/ViewActionBar.png" alt="Details Button on Action Bar"/>
+            </p>
+            <p>
+                Object attributes can be displayed by clicking the <b>Details</b> icon.
+                This icon is displayed as an <b>'i'</b> icon, in the Action Bar.
+            </p>
+            <p>
+                <image href="resources/images/Hide_details.png" alt="Details Button on Action Bar"/>
+            </p>
+            <p>
+                When the screen is at minimum width, only the <b>Topology Tree</b> is displayed. Click <b>i</b> to display the attribute details.
+                A <b>Main</b> menu item is displayed in the <b>Action Bar </b>. Click <b>Main</b> to view the  <b>Topology Tree</b>.
+            </p>
+            <p>
+                The Action bar displays action buttons. These allow other ENM applications to be launched with the
+                context selected in the Topology Tree.
+            </p>
+            <p>
+                <b>Note:</b> Action buttons are dependent on the Managed Object (MO) type selected.
+            </p>
+            <p>
+                The <b>Search for an Object</b> button allows access to the Network Explorer search functionality. The search
+                results returned can use either the <b>Locate In Topology</b> or <b>Return Selected Managed Object</b> buttons.
+                The <b>Locate In Topology</b> button in the Action bar opens Topology Browser in a new browser window.
+                Select the <b>Return Selected Managed Object</b> button located on the bottom bar, to return to the
+                application that called Network Explorer.
+            </p>
+            <p>
+                <b>Note: UN/VSN</b> nodes will support <b>Search for an Object, Add to a Collection, Browse to FDN, Manage Links, Create Link, Delete All Links, Delete Node</b> actions.
+            </p>
+            <p>
+                <image href="resources/images/NetworkExplorerInput.png" alt="Network Explorer Input"/>
+            </p>
+            <b><u>Right Click Actions</u></b>
+            <p>
+                When objects are selected from the Topology Tree, there are 2 ways to perform actions on them:
+            </p>
+            <p>
+                1. Click the buttons in the <b>Action Bar</b>
+            </p>
+            <p>
+                2. Right click on the object to display a list of all actions that can be performed on that object
+            </p>
+            <p>
+                <image href="resources/images/TopologyBrowserRightClick.png" alt="Example Right Click Menu" />
+            </p>
+            <p>
+                If some Actions are temporarily unavailable, a warning message is displayed.
+            </p>
+            <b><u>Grouping and Ordering</u></b>
+            <p>
+                Similar Actions are grouped together. Line separators are used to indicate groupings in both the
+                Action Bar and right click menu.
+            </p>
+            <p>
+                The following Actions are available:
+            </p>
+            <ul>
+                <li>Monitor Alarms</li>
+                <li>Monitor This Node</li>
+                <li>Run Node Health Check</li>
+                <li>View Incidents</li>
+                <li>Add to Collection</li>
+                <li>Edit State</li>
+                <li>Initiate CM Sync</li>
+                <li>View Cells</li>
+                <li>View Software Inventory</li>
+                <li>View License Inventory</li>
+                <li>View Hardware Inventory</li>
+                <li>View Backup Inventory</li>
+                <li>Upgrade Node Software</li>
+                <li>Restart Node</li>
+                <li>Backup Node</li>
+                <li>Delete Node</li>
+                <li>Manage Link</li>
+                <li>Create Node</li>
+                <li>Delete All Links</li>
+                <li>Enable Supervisions</li>
+                <li>Disable Supervisions</li>
+                <li>Launch Element Manager</li>
+                <li>Launch Element Manager (CLI)</li>
+                <li>Launch AMOS</li>
+                <li>Launch Cabinet Viewer</li>
+                <li>Launch Node CLI</li>
+                <li>Launch WinFIOL</li>
+                <li>Launch WinFIOL (CLI)</li>
+                <li>Launch NM Toolbox</li>
+                <li>Remove from Collection</li>
+                <li>Move to Collection</li>
+            </ul>
+            <p>
+                <b>Note:</b> The Actions available are based on your permissions, selection, and added Value Packs.
+            </p>
+        </section>
+        <section id="path">
+            <title>FDN Path</title>
+            <p>
+                The FDN Path is displayed upon clicking the <b>Browse to FDN</b> button in the Action Bar above the Tree. When clicked, the FDN Path indicates the current selected location to the user.
+                The path is editable, meaning the text can be changed, selected, copied, and pasted.
+                Note that the FDN Path is not a search function, and only a correctly formatted FDN can be entered.
+            </p>
+            <p>
+                <image href="resources/images/FDNPathSelected.png" alt="Path Selected"/>
+            </p>
+            <p>
+                The user can select and highlight all or part of the path, and perform copy and paste functions within the editable path.
+                This allows the path to be copied to other applications within the Ericsson Network Manager, such as the CLI App.
+            </p>
+            <p>
+                <image href="resources/images/FDNPathNavigate.png" alt="Hide Details link on Action Bar"/>
+            </p>
+            <p>
+                If the FDN path is not fully visible, it can be navigated left or right by moving the cursor back and forth on the editable path.
+            </p>
+        </section>
+        <section id="multiSelection">
+            <title>Multi-Selection in the Tree</title>
+            <p>
+                Multiple Managed Objects (MO's) can be selected using CTRL and SHIFT select on multiple rows.
+                This allows more than one object to be taken as context to other applications if required.
+                Note that multiple selection is not supported on touchscreen devices which do not have CTRL and SHIFT keys.
+            </p>
+            <p>
+                The details panel, FDN path, and POID in the URL are updated to reflect the <b><u>last</u></b> valid selection made.
+            </p>
+            <p>
+                Single selection is possible by selecting the row of any Managed Object.
+                This will clear any other multi-selections, and this will be the only MO selected.
+            </p>
+            <p>
+                If an MO is already selected, selecting the row will deselect the MO, and if this was the only selection,
+                then this will result in no selections.
+                Where multiple MO's are selected, selecting the last selected MO will clear all selections. Selecting any one of
+                the other MO's (other than the last selected MO), will result in just that MO being selected.
+            </p>
+            <p>
+                The number of MO's selected is displayed above the tree using the <b><i>Selected (n)</i></b> field.
+                To deselect everything in the tree, use the <b><i>Clear</i></b> link located above the tree.
+            </p>
+            <p>
+                Recursive selection is not supported, either downwards or upwards in the tree.
+                This means that any selection will not affect any other MO selections either below or above it in the tree.
+            </p>
+            <p>
+                Selection is not supported for 'All Other Nodes' and 'No children found' items in the tree.
+                Such items are not considered valid MO's, and are for informational purposes only.
+            </p>
+        </section>
+        <section id="scopingPanel">
+            <title>Scoping Panel</title>
+            <p>
+                The <b>Scoping Panel</b>
+                is displayed on the right of the Custom Topology UI with the
+                <b>Add Topology Data</b>
+                heading. Use the scoping panel to select the nodes you want to add to a custom topology.
+            </p>
+            <p>
+                The <b>Scoping Panel</b> shows the number of MeContext and ManagedElement child nodes under a <b>SubNetwork</b> or <b>Collection</b>.
+            </p>
+            <p>
+                <image href="resources/images/ScopingPanelCustomTopology.png"/>
+            </p>
+            <p>
+                The scoping panel consists of the following tabs:
+                <ul>
+                    <li>
+                        <xref href="#Topology">Topology</xref>
+                        - which allows nodes and Subnetworks to be selected directly
+                        from the network topology.
+                    </li>
+                    <li>
+                        <xref href="#Search">Search</xref> - For instructions on how to use the Search tab, see the '<xref href="#help/app/networkexplorer" scope="external">Network Explorer</xref>' application help section.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                The scoping panel is represented by the <b>Add Topology Data</b> action button in the <b>quick action bar</b>.
+                The scoping panel can be displayed by clicking the button.
+            </p>
+            <p>
+                Note the following Scoping Panel behaviors:
+                <ul>
+                    <li>
+                        Items selected in the scoping panel tabs are retained when navigating between the tabs.
+                    </li>
+                    <li>
+                        The tabs display nodes in the Model Hierarchy and other topologies.
+                    </li>
+                    <li>
+                        Subnetworks are always displayed in the topology tab, but they may be empty if they contain
+                        no supported node types.
+                    </li>
+                    <li>
+                        Selecting a subnetwork in the topology tab displays the cells for all supported nodes contained
+                        directly beneath that subnetwork.
+                        It <b>will not</b> display the cells for any nested subnetworks contained in the subnetwork.
+                        Nested subnetworks must be selected to view the cells for the nodes they contain.
+                    </li>
+                </ul>
+            </p>
+
+            <sectiondiv id="Topology">
+                <p>
+                    <b>
+                        <u>Topology Tab</u>
+                    </b>
+                </p>
+                <p>
+                    The topology tab is the default tab. This tab is opened when the Scoping Panel is
+                    first launched. The last selected topology will be opened by default.
+                    <fig>
+                        <title></title>
+                        <image href="resources/images/TopologyTab.png"/>
+                    </fig>
+                </p>
+                <p>
+                    The topology tab contains subnetworks, nodes, and the <b>All other nodes</b> item. Nodes are found
+                    under the <b>All other nodes</b> item unless they are added beneath subnetworks.
+                </p>
+                <p>Subnetworks are represented by the globe icon
+                    <image href="resources/images/Globe.png"/>
+                </p>
+                <p>Nodes are represented by the base station icon
+                    <image href="resources/images/BaseStation.png"/>
+                </p>
+                <p>
+                    <b>All other nodes</b>
+                    is represented by the folder icon
+                    <image href="resources/images/Folder.png"/>
+                </p>
+                <p>Synched nodes do not have an icon beside them.
+                </p>
+                <p>Unsynched nodes have the icon
+                    <image href="resources/images/Unsynched.png"/>
+                    beside them.
+                </p>
+                <p>Nodes that do not support CM sync have the icon
+                    <image href="resources/images/SyncNotSupported.png"/>
+                    beside them.
+                </p>
+            </sectiondiv>
+        </section>
+
+        <section id="createACollectionFlyout">
+            <title>Create A Collection Fly-out</title>
+            <p>When a Custom topology tree is selected, the <b>Create Collection</b> button is displayed. When <b>Create Collection</b> is clicked, the following fly-out is displayed:</p>
+            <p>
+                <image href="resources/images/CreateCollectionFlyout.png"/>
+            </p>
+            <p>Enter <b>Collection Name</b>. This is a mandatory field.</p>
+            <p>The <b>Labels Field</b> is an optional field.</p>
+            <p>Select the required <b>Collection Contains</b> option.</p>
+            <ul>
+                <li><b>Objects:</b> Select this radio button to add Network Objects from the Modelled topology to the collection.</li>
+                <li><b>Collections:</b> Select this radio button to group collections under a collection in a hierarchical structure.</li>
+            </ul>
+            <p> </p>
+            <p><b>Note:</b></p>
+            <ul>
+                <li>Topology data can only be added to a collection of objects.</li>
+                <li>Collections of objects can be created in a Collection of Collections.</li>
+            </ul>
+            <p> </p>
+            <p>Click <b>Create</b> to create the required collection.</p>
+        </section>
+
+        <section id="createATopologyFlyout">
+            <title>Create A Custom Topology Fly-out</title>
+            <p>When <b>Create a Custom Topology</b> option is selected from the Topology drop-down, the <b>Create a Custom Topology</b> fly-out is displayed. When <b>Create Collection</b> is clicked, the following fly-out is displayed:</p>
+            <p>
+                <image href="resources/images/CreateTopologyFlyout.png"/>
+            </p>
+            <p>Enter <b>Topology Name</b>. This is a mandatory field.</p>
+            <p><b>Note:</b> The <b>Sharing Permissions</b> and <b>Collection Contains</b> options are disabled.</p>
+            <p> </p>
+            <p>Click <b>Create</b> to create the required topology.</p>
+        </section>
+
+        <section id="createAPrivateNetworkFlyout">
+            <title>Create A Private Network Fly-out</title>
+            <p>
+                Private Networks are physical or virtual cellular systems that have been deployed for private use by a government, company or group of companies.
+                ENM allows operators to create Private Networks as distinct topologies of nodes.
+            </p>
+            <p>When a Custom Topology tree is selected, the <b>Create Private Network</b> button is displayed. When <b>Create Private Network</b> is clicked, the following fly-out is displayed:</p>
+            <p>
+                <image href="resources/images/PrivateNetworkFlyout.png"/>
+            </p>
+            <p>Enter <b>Collection Name</b>, <b>Company Name</b>, <b>Network Name</b>, <b>Location</b> these fields are mandatory.</p>
+            <p> </p>
+            <p><b>Note:</b></p>
+            <ul>
+                <li>Topology data can only be added to a collection of objects.</li>
+                <li>Private Network can only be Private if the parent collection is Private.</li>
+            </ul>
+            <p> </p>
+            <p>Click <b>Create</b> to create the required collection.</p>
+        </section>
+
+        <section>
+            <title id="detailPanel">Details Panel</title>
+            <p>
+                To view the details panel click on a <b>single</b> collection, The details panel will be filled.
+                When more than one collection is selected in the <b>Collections</b> table,
+                the <b>details panel</b> will show the last selected collection.
+            </p>
+            <p>
+                The info icon can be pressed to hide/show the collection details panel.
+            </p>
+            <sectiondiv>
+                <image href="resources/images/CollectionDetailsPanel.PNG"/>
+            </sectiondiv>
+        </section>
+
+        <section>
+            <title id="editCollection">Edit a Collection</title>
+            <p>
+                To edit a collection click on the Edit button.
+                When one or more collections are selected in the <b>Collections</b> table,
+                the <b>Edit Collection</b> button will show for the last selected collection.
+                For details, refer to <xref href="#help/app/networkexplorercollections/topic/tutorials/editCollection"  scope="external">Edit Collection</xref> tutorial.
+            </p>
+            <sectiondiv>
+                <image href="resources/images/EditCollectionPanelDetails.PNG"/>
+            </sectiondiv>
+            <p>
+                <b>Note:</b> Depending on the collection the editable fields may change.
+            </p>
+        </section>
+
+        <section>
+            <title id="createCollectionOfCollectionsAndObjects">Create a Collection of Collections and Objects</title>
+            <p>To create a <b>Collection of Collections and Objects</b>, select or right click on a <b>Collection of Objects</b> and then select <b>Add Topology Data</b>.</p>
+            <p>The Scoping Panel will open where the <b>Collections</b> tab is displayed alongside the pre-existing <b>Topology</b> and <b>Search</b> buttons.</p>
+            <p>Collections can be searched and then added to the <b>Collection of Objects</b> which contains pre-existing objects.</p>
+            <sectiondiv>
+                <image href="resources/images/CollectionOfCollectionsAndObjects.png"/>
+                <image href="resources/images/CollectionOfCollectionsAndObjects_ScopingPanelCollections.png"/>
+            </sectiondiv>
+            <p>The collection type will change to <b>Collection of Collections and Objects</b> when the collection is added to the Collection of Objects for the first time.</p>
+        </section>
+
+        <section id="addObjectToCollectionOfCollections">
+            <title>Add Objects to a Collection of Collections</title>
+            <p>To add objects to a Collection of Collections, select or right click on a <b>Collection of Collections</b> and then select  <b>Add Topology Data</b>.</p>
+            <p>When the Scoping Panel is opened, button for <b>Collections</b> are available as well as the existing <b>Topology</b> and <b>Search</b> buttons.</p>
+            <p>Objects can then be selected or searched as normal and added to the collection along with any pre-existing objects or collections.</p>
+            <sectiondiv>
+                <image href="resources/images/addTopologyDataToLegacyBranch.png"/>
+                <image href="resources/images/addTopologyDataToLegacyBranchScopingPanel.png"/>
+            </sectiondiv>
+            <p>As part of the transaction to add the object, the Collection type must be set to a <b>Collection of Collections and Objects</b> the first time an object is added to the <b>Collection of Collections</b>.</p>
+        </section>
+
+        <section id="moveToCollection">
+            <title>Move Up to Ten Objects to a Collection</title>
+            <p>Move <b>up to Ten Objects</b> from a single source to a single destination Collection</p>
+            <p>To move multiple Managed Objects (MO's), use SHIFT to select multiple Objects or CTRL to select individual Objects.</p>
+            <p>Once all desired Objects have been selected, click the <b>Move to Collection</b> button.</p>
+            <sectiondiv>
+                <image href="resources/images/MoveMultipleToCollectionButton.png"/>
+            </sectiondiv>
+            <p>When the Scoping Panel is opened, the <b>Topology</b> tab is in view and <b>Transport Topology</b> is automatically selected.</p>
+            <p>Select the target collection from the Scoping Panel you wish to move the objects to and click the <b>Move</b> button.</p>
+            <sectiondiv>
+                <image href="resources/images/MoveMultipleToCollectionScopingPanel.png"/>
+            </sectiondiv>
+            <p>When the <b>Move</b> button has been clicked and the transaction has completed, the selected objects will be removed from the source collection and moved to the target collection.</p>
+            <sectiondiv>
+                <image href="resources/images/MoveMultipleToCollectionCompletedTransaction.png"/>
+            </sectiondiv>
+        </section>
+
+        <section id="findAndLocateNode">
+            <title>Find and Locate Node(s) in Topology Collections</title>
+            <p>To search for a node inside a Topology collection, click on the <image href="resources/images/SearchIcon.png"/> icon next to the refresh button at the top of the topology tree.</p><p>Once the icon is clicked, a search bar and navigation arrow buttons (up and down) will be displayed.</p>
+            <p>Clicking the icon again hides the search bar and the navigation buttons.</p>
+            <sectiondiv>
+                <image href="resources/images/Search_Expand.png"/>
+            </sectiondiv>
+            <p>Within the text input, searching nodes by its partial or full name is supported.</p>
+            <p>However, note that the search text is case-sensitive. For example, when searching for a node with the
+                name 'NR01gNodeBRadio00001', 'NR*' may be used.
+            </p>
+            <p>Note the following ways of how partial text search can be used:
+                <ul>
+                    <li>To search for a node with a name starting with 'NR', 'NR*' must be used.</li>
+                    <li>To search for a node with '01' anywhere in the name, then search '01' without the * symbol.</li>
+                </ul>
+            </p>
+            <p>Enter the search text and click on the up/down arrow buttons. When clicked, the first node with the matching text will be located and selected in the specified Topology tree.</p>
+            <sectiondiv>
+                <image href="resources/images/FullSearch.png"/>
+            </sectiondiv>
+            <p>If there are multiple nodes found with the given search text, the user can locate them using the up or down arrow buttons.</p>
+            <sectiondiv>
+                <image href="resources/images/PartialSearch.png"/>
+            </sectiondiv>
+        </section>
+
+        <section id="enableAndDisableSupervision">
+            <title>Enable and Disable Supervisions for Node(s)</title>
+            <p>To enable or disable supervisions for node(s). Either select the node(s) and select the <b>Enable Supervisions</b> or <b>Disable Supervisions</b> button from the action bar or right-click on the selected node(s) and select the <b>Enable Supervisions</b> or <b>Disable Supervisions</b> button from the list.</p>
+            <p>Depending on which action was selected, a dialog box will open with two buttons: <b>Enable supervisions</b> or <b>Disable supervisions</b> and <b>Cancel</b>.</p>
+            <sectiondiv>
+                <image href="resources/images/EnableSupervisionDialogBox.png"/>
+            </sectiondiv>
+            <p>After enabling or disabling supervisions, a notification will appear informing the user to check the Supervision Notification Panel.</p>
+            <p>Click on the <image href="resources/images/mail_black_16px.svg"/> icon and the <b>Supervision Notification Panel</b> will open. Each notification will display a progress bar and the two buttons: <b>View Status</b> and <b>Locate Node</b>.</p>
+            <sectiondiv>
+                <image href="resources/images/SupervisionPanelWithEnabledSupervisionNodes.png"/>
+            </sectiondiv>
+            <p>In the Supervision Notification Panel, click on the <b>View Status</b> button for any node. A dialog box will open and show the supervision status for the selected node.</p>
+            <sectiondiv>
+                <image href="resources/images/ViewStatus.png"/>
+            </sectiondiv>
+            <p>Click on the <b>Locate Node</b> button for any node. It will locate that node in the Topology Tree.</p>
+            <sectiondiv>
+                <image href="resources/images/LocateNodeFromSupervisionPanel.png"/>
+            </sectiondiv>
+            <p><b>Note</b>: Any user created Custom Topology will only have the View Status button.</p>
+            <sectiondiv>
+                <image href="resources/images/CustomTopologyNoLocateNode.png"/>
+            </sectiondiv>
+            <p>In the Supervision Notification Panel, click on the <b>Clear completed tasks</b> button and all the notifications will be cleared.</p>
+            <sectiondiv>
+                <image href="resources/images/ClearNotification.png"/>
+            </sectiondiv>
+        </section>
+    </conbody>
+</concept>

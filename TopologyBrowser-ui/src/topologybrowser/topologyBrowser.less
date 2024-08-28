@@ -1,0 +1,54 @@
+.eaTopologyBrowser {
+      &-rTopologyTree {
+        height: 100%;
+      }
+
+  &-AppContainer {
+    min-width: 320px;
+    min-height: 200px;
+  }
+  &-Content {
+    display: table;
+    width: 100%;
+    overflow: hidden;
+
+    &-block {
+      text-align: center;
+      vertical-align: middle;
+      background: url('../content_icon.svg') transparent;
+      font-size: 1.8rem;
+      color: #8d8d8d;
+      line-height: 2.4rem;
+      font-weight: bold;
+      display: table-cell;
+    }
+  }
+
+  &-ebNotification-label-multiline {
+    max-width: calc(~'100% - 32px');
+  }
+
+  @media screen and (max-width: 320px) {
+    &-searchBtn {
+      min-width: 40px;
+
+      &label {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-height: 480px) {
+    &-AppContainer {
+   //   min-height: 480px;
+      overflow: auto;
+    }
+
+    &-searchBtn {
+      min-width: 40px;
+
+      &label {
+        display: none;
+      }
+    }
+  }
+}

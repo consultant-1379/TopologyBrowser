@@ -1,0 +1,12 @@
+<div class="elNetworkObjectLib-ModelInfoDisplay">
+    <div class="elNetworkObjectLib-ModelInfoDisplay-header"><span>{{header}}</span></div>
+    <div class="elNetworkObjectLib-ModelInfoDisplay-attributeName"><span>{{attributeName}}</span></div>
+    <div><span class="elNetworkObjectLib-ModelInfoDisplay-description">{{description}}</span></div>
+    <div class="elNetworkObjectLib-ModelInfoDisplay-descriptionBody"><span >{{descriptionBody}}</span></div>
+    <dl class="elNetworkObjectLib-ModelInfoDisplay-table">
+        {{#each modelInfoItems}}
+        <dt class="elNetworkObjectLib-ModelInfoDisplay-key">{{@key}}</dt>
+        <dd class="elNetworkObjectLib-ModelInfoDisplay-value">{{this}}</dd>
+        {{/each}}
+    </dl>
+</div>

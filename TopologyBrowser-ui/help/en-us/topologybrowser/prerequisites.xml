@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Prerequisites">
+    <title>Prerequisites</title>
+    <conbody>
+
+        <section>
+            <title>Required User Roles</title>
+            <p>
+                To use Topology Browser, you must have a user account with one of the following roles:  </p>
+            <ul>
+                <li>Topology_Browser_Operator</li>
+                <li>Topology_Browser_Administrator</li>
+                <li>Custom role with Topology Browser capabilities
+                    <ul>
+                        <li><b>Resource:</b> rootAssociations, <b>Operation:</b> read</li>
+                        <li><b>Resource:</b> persistentobjectservice, <b>Operation:</b> read</li>
+                        <li><b>Resource:</b> persistentobjectservice, <b>Operation:</b> update</li>
+                        <li><b>Resource:</b> modelInformationService, <b>Operation:</b> read</li>
+                    </ul>
+                </li>
+                <li> Required resources for Custom Topology access on Topology Browser
+                    <ul>
+                        <li><b>Resource:</b> create_nested_collection</li>
+                        <li><b>Resource:</b> read_nested_collection</li>
+                        <li><b>Resource:</b> delete_nested_collection</li>
+                        <li><b>Resource:</b> update_nested_collection</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <title>Target Based Access Control (TBAC)</title>
+            <p>
+                TBAC is an authorization mechanism that restricts access to the targets (Nodes) assigned.
+            </p>
+            <p>
+                When TBAC is enabled, only the nodes defined in the user permissions (refer to the
+                <xref href="#help/app/targetmanagement" scope="external">Target Group Management User Guide</xref> for more information) are accessible.
+                This can affect the results of searches and collections contents, causing different users to get different results based on their assigned targets.
+            </p>
+        </section>
+    </conbody>
+</concept>

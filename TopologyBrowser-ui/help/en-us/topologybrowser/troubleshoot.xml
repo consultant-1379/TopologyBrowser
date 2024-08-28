@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="UserInterface">
+    <title>Troubleshooting</title>
+    <conbody>
+        <section>
+            <p>
+                ENM Troubleshooting information is available from the ENM Troubleshooting Guide, 1/15901-AOM 901 151.
+                This guide is available in the ENM CPI Library, EN/LZN 703 0205.
+            </p>
+            <p>The ENM CPI Library is available in the Alex Library, under Documentation, from the ENM Application Launcher.</p>
+        </section>
+    </conbody>
+</concept>

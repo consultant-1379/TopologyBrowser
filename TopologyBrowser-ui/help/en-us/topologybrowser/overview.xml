@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="MyApp-Overview">
+    <title>Overview</title>
+    <conbody>
+        <p>
+            Topology Browser is a web-based application, launched from the ENM Launcher page. 
+            Topology Browser provides the ability to view the Modelled Topology or a Custom Toplogy in the tree view. 
+
+            <ul>
+                <li>When the Modelled Topology choice of "Network Data" is chosen then a tree view of the network model is presented.</li>
+                <li>When a Custom Toplogy is chosen then a tree view of the topology is presented. The topology can be customised by a network engineer with a hierarchy of collections and network objects which is a a useful subset of the full network. 
+                Topology Browser allows the network engineer with appropriate permissions to Create/Update/Delete/Remove parts of a Custom Topology.</li>
+            </ul>
+            
+            Both Modelled and Custom topologies can be navigated up and down.
+        </p> 
+        <p> 
+            Note however that Topology Browser is not a live view of the network. Any changes that occur on the network, for example, Adding/Removing Network Elements due to a different user will not be automatically reflected in the current users topology tree. To display the latest view of the network the user can click on the refresh button at the top of the topology tree are which will then give the user the latest view of the complete Network at a particular instance in time in the topology tree. 
+            Before a refresh of the topology tree, if the user clicks on a Network Element which has been deleted, the Topology Tree will update to remove the deleted Network Element and refresh the tree from that Network Element back to its root.
+        </p>
+        <p>    
+            Topology Browser allows both single and multi selection of network elements (Capability of USe case). Both Collection and Objects cannot be selected together. When a network element is selected, the persistent
+            and non-persistent attributes can be visualized. The attribute values can be modified if you have administrator rights.
+            Some common attributes can be edited in CM/CLI that are not exposed as editable in Topology Browser.
+
+        </p>
+        <p>
+            When a network element is selected an internal representation of the network element is displayed in the browser url identified as a Persistent Object Unique Identifier (POID). The POID can subsequently be used for navigation back to that point in the Topology view. Target Based Access Control(TBAC) only displays authorized nodes.
+        </p>
+        <p>
+            To view the associated network element of an MeContext or ManagedElement, the object can be located and returned through the <xref href="#help/app/networkexplorer" scope="external">Network Explorer</xref> application. The NetworkElement side of the model is not organized as a topology in ENM. This means each network element will stand alone.
+            The default view in Topology Browser shows the MeContext/ManagedElement side of the model, and this is organized as topology in ENM. As MeContext/ManagedElements don't exist before synchronization, at that point they won't be visible in the topology tree.
+        </p>
+    </conbody>
+</concept>

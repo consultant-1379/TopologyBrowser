@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="View_Attributes_Tutorial">
+    <title>View Attribute Details </title>
+    <taskbody>
+        <prereq>
+            <p>
+                <ul>
+                    <li>
+                        There are nodes synchronized on ENM.
+                    </li>
+                    <li>
+                        The ENM user must have read rights for Topology Browser.
+                    </li>
+                </ul>
+            </p>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>
+                The Attribute Details are displayed in the panel to the right of Topology Tree.
+                The Details panel shows the current property values of the selected Managed Object (MO).
+            </p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">View Attributes in the Details Panel</xref>
+                </li>
+                <li>
+                    <xref href="#2">View Attributes in Edit mode</xref>
+                </li>
+                <li>
+                    <xref href="#3">Filter Attributes by name</xref>
+                </li>
+                <li>
+                    <xref href="#4">View Node Details Tab</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>View Attributes in the Details Panel</cmd>
+                <info>
+                    <p>
+                        It is possible to view both the Persistent and Non-Persistent attributes of a selected Managed Object (MO).
+                        <ul>
+                            <li>
+                                Click an object on the topology tree.
+                            </li>
+                            <li>
+                                Click the Details button located in the Action Bar. It is designated with an '<b>i</b>' icon.
+                                A sliding panel will appear detailing the attributes of the selected object.
+                            </li>
+                        </ul>
+                            <image href="../resources/images/ViewProperties.png" alt="View Properties"/>
+                    </p>
+                </info>
+            </step>
+
+            <step id="2">
+                <cmd>View Attributes in Edit mode</cmd>
+                <info>
+                    <ul>
+                        <li>To view which attributes can be edited, click the <b>Edit Attributes</b> button.</li>
+                        <li>To exit the editable view mode click the <b>Cancel</b> link.</li>
+                    </ul>
+                    <image href="../resources/images/EditProperties.png" alt="Edit Properties"/>
+
+                </info>
+            </step>
+
+            <step id="3">
+                <cmd>Filter Attributes by name</cmd>
+                <info>
+                    <ul>
+                        <li>Enter a partial (from the beginning) or full property name.</li>
+                        <li>Continue typing, and notice that the properties are narrowed.</li>
+                    </ul>
+                    <image href="../resources/images/FilterDetails.png" alt="Filter Properties"/>
+                </info>
+            </step>
+            <step id="4">
+                <cmd>View Node Details Tab</cmd>
+                <info>
+                    <p>The Node Details TAB displays the Synchronization State, IP address, Management State, Network Functions, Radio Access Technology, and Collection details of the node associated with the selected MO.</p>
+                    <ul>
+                        <li>Select an MO in the topology tree below the SubNetwork level.</li>
+                        <li>Select the Node Details Tab in the Details Panel</li>
+                    </ul>
+                    <image href="../resources/images/NodeDetails.png" alt="Node Properties"/>
+                  <p>Note: </p>
+                    <ul>
+                        <li>Node Details TAB is not present for SubNetworks, as these contain multiple nodes which can have independent and potentially different Synchronization States.</li>
+                        <li>The Synchronization State can also be viewed on the topology tree for node-level MO's as described in the <xref href="../userinterface.xml" type="concept">Topology Tree</xref>.</li>
+                        <li>In the case of collection details, the complete hierarchy can be viewed if the object belongs to Transport Topology Type Collections. However, if a node belongs to a Non-Transport Topology Collection, only the direct collection or parent collection of the node is shown.</li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

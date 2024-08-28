@@ -1,0 +1,30 @@
+.elNetworkObjectLib-readOnly {
+    margin-bottom: 10px;
+
+    &-key {
+        font-size: 12px;
+        color: #8d8d8d;
+    }
+    &-value {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    &-collections
+    {
+        display: none;
+        padding-top: 4px;
+        &-filterItem:last-child {
+           border: none;
+        }
+        &-filterItem {
+           padding: 0;
+        }
+    }
+    &-icon {
+
+        &-managementState, &-syncStatus{
+            float:right;
+            flex-shrink: 0;
+        }
+    }
+}

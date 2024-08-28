@@ -1,0 +1,17 @@
+{
+  "name": "TopologyBrowser",
+  "version": "0.0.1-SNAPSHOT",
+  "scripts": {
+    "start": "cdt2 serve -m server.js",
+    "test": "cdt2 build --use-external-phantomjs",
+    "lint": "eslint -c ../.eslintrc.js \"src/**/*.js\" \"test/**/*.js\"",
+    "lint-fix": "npm run lint -- --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "request": "^2.79.0",
+    "@uisdk/ericsson_yui_theme": "0.7.3",
+    "yuidocjs": "0.10.2"
+  }
+}

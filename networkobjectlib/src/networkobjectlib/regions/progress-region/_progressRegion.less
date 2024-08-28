@@ -1,0 +1,105 @@
+
+.elNetworkObjectLib-progressRegion {
+    position: relative;
+    min-height: 400px;
+    min-width: 610px;
+
+    &-summary {
+        height:64px;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        position: absolute;
+        width: 100%;
+        border-bottom: 2px solid #c3c3c3;
+
+        &-counter {
+            min-width: 80px;
+            height:56px;
+            border-right: 1px solid #c3c3c3;
+        }
+        &-progress {
+            flex-grow: 1;
+            min-width: 80px;
+            height:56px;
+            position: relative;
+            border-right: none;
+            &-bar {
+                border-right: none;
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+                left: 8px;
+            }
+        }
+    }
+    &-details {
+        position: absolute;
+        top: 70px;
+        bottom: 30px;
+        margin: auto;
+        overflow: auto;
+    }
+    &-footer {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    @media screen and (max-width: 480px) {
+        min-height: initial;
+        min-width: 200px;
+        &-summary {
+            height: initial;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: left;
+            justify-content: center;
+            list-style-type: none;
+            position: relative;
+            width: 100%;
+            border-bottom: 2px solid #c3c3c3;
+
+            &-counter {
+                min-width: initial;
+                height:initial;
+                border-right: none;
+                width: 100%;
+            }
+            &-progress {
+                display: none;
+                flex-grow: 1;
+                position: relative;
+                border-right: none;
+                min-width: initial;
+                height:initial;
+                width: 100%;
+                &-bar {
+                    position: absolute;
+                    right: 0;
+                    bottom: 10px;
+                }
+            }
+        }
+        &-details {
+            min-height: 300px;
+            max-height: 300px;
+            position: relative;
+            top: initial;
+            bottom: initial;
+            margin: auto;
+            overflow: auto;
+        }
+        &-footer {
+            position: relative;
+            bottom: initial;
+        }
+    }
+}

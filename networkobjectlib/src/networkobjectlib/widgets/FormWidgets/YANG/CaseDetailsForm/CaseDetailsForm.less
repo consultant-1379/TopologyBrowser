@@ -1,0 +1,33 @@
+.elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases-casedetails {
+  &-form_hidden {
+    display: none;
+  }
+   &-form{
+       &-container{
+         overflow: visible;
+         position: relative;
+       }
+
+     &-modifiedHolder {
+       padding-bottom: 15px;
+       &-label{
+         bottom: 2px;
+         position: relative;
+       }
+     }
+   }
+
+  @media screen and (max-width: 1040px) {
+    top: 35px;
+  }
+}
+
+.elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases .elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases-case:not(:last-child) {
+  .elNetworkObjectLib-wNodeDetailsForm-form-yangchoice-cases-casedetails {
+    &-form {
+      &-container {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

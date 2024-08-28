@@ -1,0 +1,50 @@
+{
+    "parent": "$(parentJson)/library.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "scopingpanel",
+        "name": "ScopingPanel",
+        "version": "1.0.0",
+        "skeleton": "2.3.0",
+        "skeletonType": "library",
+        "title": "Scoping Panel",
+        "description": "Scoping Panel allows developers to use introduce Network Explorer and Topology Browser functionality to other applications"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "networkobjectlib": "1.140.6",
+        "assets": "1.9.0",
+        "clientsdk": "1.46.0",
+        "helpsdk": "2.10.3",
+        "layouts": "1.8.8",
+        "tablelib": "0.10.4",
+        "networkexplorerlib": "1.89.5",
+        "i18n": "2.4.5",
+        "flyout": "0.1.8",
+        "grammarparsinglibrary": "1.0.0",
+        "logger": "0.2.1",
+        "navigation": "0.0.17",
+        "router": "1.0.1",
+        "uit": "0.3.5",
+        "webpush": "0.4.1",
+        "jscore": "1.7.17",
+        "container": "1.14.12",
+        "contextmenu": "0.1.14",
+        "dataviz": "0.1.12",
+        "formvalidator": "0.2.2",
+        "mapping": "1.0.1",
+        "systemtime": "0.0.9",
+        "terminal": "1.0.3",
+        "chartlib": "1.6.32",
+        "widgets": "1.8.25"
+    }
+}

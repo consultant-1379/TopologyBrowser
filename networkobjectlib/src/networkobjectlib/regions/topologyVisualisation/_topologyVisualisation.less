@@ -1,0 +1,26 @@
+.elNetworkObjectLib-rTopologyVisualisation {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-header {
+        flex: none;
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &-tree {
+        height: 100%; // only necessary to bypass phantomjs
+        flex: 1;
+        min-height: 165px; // holds 5 items in tree
+
+        &_bordered {
+            background: #F8F8F8;
+            border-color: #D2D2D1;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+        }
+    }
+}
